@@ -9,9 +9,10 @@ import java.awt.*;
 public class topnav extends JPanel{
     public topnav() {
         //Elements to be added to the topnav
-        JButton home = new JButton("Home");
-        JButton about = new JButton("About");
-        JButton contact = new JButton("Contact");
+        button home = new button("Home");
+        button about = new button("About");
+        button contact = new button("Contact");
+
         //Text to display the username of the user
         JLabel username = new JLabel("Username");
         //App Logo
