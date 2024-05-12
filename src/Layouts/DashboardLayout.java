@@ -46,10 +46,6 @@ public class DashboardLayout extends JFrame {
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");
-        
-        
-        
-
 
         // Add main panel to the frame
         add(mainPanel);
