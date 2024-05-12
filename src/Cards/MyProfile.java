@@ -30,71 +30,71 @@ public class MyProfile extends javax.swing.JPanel {
 
         myProfileHeader = new javax.swing.JLabel();
         editProfileButton = new javax.swing.JButton();
-        firstNameField = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        middleNameField = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        lastNameField = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        suffixField = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        dateOfBirthField = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        genderField = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        emailAddressField = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        mobileNoField = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        contactNoField = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        weightField = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        heightField = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        civilStatusField = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        religionField = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        houseNoAndStreetField = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        firstName = new javax.swing.JPanel();
+        firstNameLabel = new javax.swing.JLabel();
+        firstNameField = new javax.swing.JTextField();
+        middleName = new javax.swing.JPanel();
+        middleNameLabel = new javax.swing.JLabel();
+        middleNameField = new javax.swing.JTextField();
+        lastName = new javax.swing.JPanel();
+        lastNameLabel = new javax.swing.JLabel();
+        lastNameField = new javax.swing.JTextField();
+        suffix = new javax.swing.JPanel();
+        suffixLabel = new javax.swing.JLabel();
+        suffixField = new javax.swing.JTextField();
+        dateOfBirth = new javax.swing.JPanel();
+        dateOfBirthLabel = new javax.swing.JLabel();
+        dateOfBirthField = new javax.swing.JTextField();
+        gender = new javax.swing.JPanel();
+        genderLabel = new javax.swing.JLabel();
+        genderField = new javax.swing.JTextField();
+        emailAddress = new javax.swing.JPanel();
+        emailAddressLabel = new javax.swing.JLabel();
+        emailAddressField = new javax.swing.JTextField();
+        mobileNo = new javax.swing.JPanel();
+        mobileNoLabel = new javax.swing.JLabel();
+        mobileNoField = new javax.swing.JTextField();
+        contactNo = new javax.swing.JPanel();
+        contactNoLabel = new javax.swing.JLabel();
+        contactNoField = new javax.swing.JTextField();
+        weight = new javax.swing.JPanel();
+        weightLabel = new javax.swing.JLabel();
+        weightField = new javax.swing.JTextField();
+        height = new javax.swing.JPanel();
+        heightLabel = new javax.swing.JLabel();
+        heightField = new javax.swing.JTextField();
+        civilStatus = new javax.swing.JPanel();
+        civilStatusLabel = new javax.swing.JLabel();
+        civilStatusField = new javax.swing.JTextField();
+        religion = new javax.swing.JPanel();
+        religionLabel = new javax.swing.JLabel();
+        religionField = new javax.swing.JTextField();
+        houseNoAndStreet = new javax.swing.JPanel();
+        houseNoAndStreetLabel = new javax.swing.JLabel();
+        houseNoAndStreetField = new javax.swing.JTextField();
         addressSubheader = new javax.swing.JLabel();
-        provinceField = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        cityMunicipalityField = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        barangayField = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        birthplaceField = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        province = new javax.swing.JPanel();
+        provinceLabel = new javax.swing.JLabel();
+        provinceComboBox = new javax.swing.JComboBox<>();
+        cityMunicipality = new javax.swing.JPanel();
+        cityMunicipalityLabel = new javax.swing.JLabel();
+        cityMunicipalityComboBox = new javax.swing.JComboBox<>();
+        barangay = new javax.swing.JPanel();
+        barangayLabel = new javax.swing.JLabel();
+        barangayComboBox = new javax.swing.JComboBox<>();
+        birthplace = new javax.swing.JPanel();
+        birthplaceLabel = new javax.swing.JLabel();
+        birthplaceField = new javax.swing.JTextField();
         mothersNameDetailsSubheader = new javax.swing.JLabel();
-        maidenFirstNameField = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        maidenMiddleNameField = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        maidenLastNameField = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        maidenFirstName = new javax.swing.JPanel();
+        maidenFirstNameLabel = new javax.swing.JLabel();
+        maidenFirstNameField = new javax.swing.JTextField();
+        maidenMiddleName = new javax.swing.JPanel();
+        maidenMiddleNameLabel = new javax.swing.JLabel();
+        maidenMiddleNameField = new javax.swing.JTextField();
+        maidenLastName = new javax.swing.JPanel();
+        maidenLastNameLabel = new javax.swing.JLabel();
+        maidenLastNameField = new javax.swing.JTextField();
         identificationsScrollPane = new javax.swing.JScrollPane();
         identificationsPanel = new javax.swing.JPanel();
         myFamilyScrollPane = new javax.swing.JScrollPane();
@@ -112,540 +112,540 @@ public class MyProfile extends javax.swing.JPanel {
         editProfileButton.setForeground(ThemeColors.ON_PRIMARY_CONTAINER);
         editProfileButton.setText("Edit Profile");
 
-        jLabel2.setText("First Name (Pangalan)");
+        firstNameLabel.setText("First Name (Pangalan)");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        firstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                firstNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout firstNameFieldLayout = new javax.swing.GroupLayout(firstNameField);
-        firstNameField.setLayout(firstNameFieldLayout);
-        firstNameFieldLayout.setHorizontalGroup(
-            firstNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(firstNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout firstNameLayout = new javax.swing.GroupLayout(firstName);
+        firstName.setLayout(firstNameLayout);
+        firstNameLayout.setHorizontalGroup(
+            firstNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(firstNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2))
+                .addComponent(firstNameLabel))
         );
-        firstNameFieldLayout.setVerticalGroup(
-            firstNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(firstNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel2)
+        firstNameLayout.setVerticalGroup(
+            firstNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(firstNameLayout.createSequentialGroup()
+                .addComponent(firstNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel4.setText("Middle Name (Gitnang Pangalan)");
+        middleNameLabel.setText("Middle Name (Gitnang Pangalan)");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        middleNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                middleNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout middleNameFieldLayout = new javax.swing.GroupLayout(middleNameField);
-        middleNameField.setLayout(middleNameFieldLayout);
-        middleNameFieldLayout.setHorizontalGroup(
-            middleNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(middleNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout middleNameLayout = new javax.swing.GroupLayout(middleName);
+        middleName.setLayout(middleNameLayout);
+        middleNameLayout.setHorizontalGroup(
+            middleNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(middleNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4))
-            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(middleNameLabel))
+            .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        middleNameFieldLayout.setVerticalGroup(
-            middleNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(middleNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel4)
+        middleNameLayout.setVerticalGroup(
+            middleNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(middleNameLayout.createSequentialGroup()
+                .addComponent(middleNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel5.setText("Last Name (Apelyido)");
+        lastNameLabel.setText("Last Name (Apelyido)");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        lastNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                lastNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout lastNameFieldLayout = new javax.swing.GroupLayout(lastNameField);
-        lastNameField.setLayout(lastNameFieldLayout);
-        lastNameFieldLayout.setHorizontalGroup(
-            lastNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(lastNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout lastNameLayout = new javax.swing.GroupLayout(lastName);
+        lastName.setLayout(lastNameLayout);
+        lastNameLayout.setHorizontalGroup(
+            lastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(lastNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5))
+                .addComponent(lastNameLabel))
         );
-        lastNameFieldLayout.setVerticalGroup(
-            lastNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lastNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel5)
+        lastNameLayout.setVerticalGroup(
+            lastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lastNameLayout.createSequentialGroup()
+                .addComponent(lastNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel6.setText("Suffix (Hulapi)");
+        suffixLabel.setText("Suffix (Hulapi)");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        suffixField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                suffixFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout suffixFieldLayout = new javax.swing.GroupLayout(suffixField);
-        suffixField.setLayout(suffixFieldLayout);
-        suffixFieldLayout.setHorizontalGroup(
-            suffixFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(suffixFieldLayout.createSequentialGroup()
-                .addGroup(suffixFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(suffixFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout suffixLayout = new javax.swing.GroupLayout(suffix);
+        suffix.setLayout(suffixLayout);
+        suffixLayout.setHorizontalGroup(
+            suffixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(suffixLayout.createSequentialGroup()
+                .addGroup(suffixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(suffixLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel6))
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(suffixLabel))
+                    .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0))
         );
-        suffixFieldLayout.setVerticalGroup(
-            suffixFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(suffixFieldLayout.createSequentialGroup()
-                .addComponent(jLabel6)
+        suffixLayout.setVerticalGroup(
+            suffixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(suffixLayout.createSequentialGroup()
+                .addComponent(suffixLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel7.setText("Date of Birth (Petsa ng Kapanganakan)");
+        dateOfBirthLabel.setText("Date of Birth (Petsa ng Kapanganakan)");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        dateOfBirthField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                dateOfBirthFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout dateOfBirthFieldLayout = new javax.swing.GroupLayout(dateOfBirthField);
-        dateOfBirthField.setLayout(dateOfBirthFieldLayout);
-        dateOfBirthFieldLayout.setHorizontalGroup(
-            dateOfBirthFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dateOfBirthFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout dateOfBirthLayout = new javax.swing.GroupLayout(dateOfBirth);
+        dateOfBirth.setLayout(dateOfBirthLayout);
+        dateOfBirthLayout.setHorizontalGroup(
+            dateOfBirthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dateOfBirthLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7))
-            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dateOfBirthLabel))
+            .addComponent(dateOfBirthField, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        dateOfBirthFieldLayout.setVerticalGroup(
-            dateOfBirthFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dateOfBirthFieldLayout.createSequentialGroup()
-                .addComponent(jLabel7)
+        dateOfBirthLayout.setVerticalGroup(
+            dateOfBirthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dateOfBirthLayout.createSequentialGroup()
+                .addComponent(dateOfBirthLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(dateOfBirthField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel8.setText("Gender (Kasarian)");
+        genderLabel.setText("Gender (Kasarian)");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        genderField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                genderFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout genderFieldLayout = new javax.swing.GroupLayout(genderField);
-        genderField.setLayout(genderFieldLayout);
-        genderFieldLayout.setHorizontalGroup(
-            genderFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(genderFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout genderLayout = new javax.swing.GroupLayout(gender);
+        gender.setLayout(genderLayout);
+        genderLayout.setHorizontalGroup(
+            genderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(genderField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(genderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel8))
+                .addComponent(genderLabel))
         );
-        genderFieldLayout.setVerticalGroup(
-            genderFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(genderFieldLayout.createSequentialGroup()
-                .addComponent(jLabel8)
+        genderLayout.setVerticalGroup(
+            genderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(genderLayout.createSequentialGroup()
+                .addComponent(genderLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(genderField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel9.setText("Email Address");
+        emailAddressLabel.setText("Email Address");
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        emailAddressField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                emailAddressFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout emailAddressFieldLayout = new javax.swing.GroupLayout(emailAddressField);
-        emailAddressField.setLayout(emailAddressFieldLayout);
-        emailAddressFieldLayout.setHorizontalGroup(
-            emailAddressFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(emailAddressFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout emailAddressLayout = new javax.swing.GroupLayout(emailAddress);
+        emailAddress.setLayout(emailAddressLayout);
+        emailAddressLayout.setHorizontalGroup(
+            emailAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(emailAddressLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9)
+                .addComponent(emailAddressLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jTextField8)
+            .addComponent(emailAddressField)
         );
-        emailAddressFieldLayout.setVerticalGroup(
-            emailAddressFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(emailAddressFieldLayout.createSequentialGroup()
-                .addComponent(jLabel9)
+        emailAddressLayout.setVerticalGroup(
+            emailAddressLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(emailAddressLayout.createSequentialGroup()
+                .addComponent(emailAddressLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(emailAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel10.setText("Mobile No. (Philippines)");
+        mobileNoLabel.setText("Mobile No. (Philippines)");
 
-        jTextField9.setText("+63");
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        mobileNoField.setText("+63");
+        mobileNoField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                mobileNoFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout mobileNoFieldLayout = new javax.swing.GroupLayout(mobileNoField);
-        mobileNoField.setLayout(mobileNoFieldLayout);
-        mobileNoFieldLayout.setHorizontalGroup(
-            mobileNoFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(mobileNoFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout mobileNoLayout = new javax.swing.GroupLayout(mobileNo);
+        mobileNo.setLayout(mobileNoLayout);
+        mobileNoLayout.setHorizontalGroup(
+            mobileNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mobileNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(mobileNoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10))
+                .addComponent(mobileNoLabel))
         );
-        mobileNoFieldLayout.setVerticalGroup(
-            mobileNoFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mobileNoFieldLayout.createSequentialGroup()
-                .addComponent(jLabel10)
+        mobileNoLayout.setVerticalGroup(
+            mobileNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mobileNoLayout.createSequentialGroup()
+                .addComponent(mobileNoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(mobileNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel11.setText("Contact No.");
+        contactNoLabel.setText("Contact No.");
 
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        contactNoField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                contactNoFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout contactNoFieldLayout = new javax.swing.GroupLayout(contactNoField);
-        contactNoField.setLayout(contactNoFieldLayout);
-        contactNoFieldLayout.setHorizontalGroup(
-            contactNoFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(contactNoFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout contactNoLayout = new javax.swing.GroupLayout(contactNo);
+        contactNo.setLayout(contactNoLayout);
+        contactNoLayout.setHorizontalGroup(
+            contactNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(contactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(contactNoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11))
+                .addComponent(contactNoLabel))
         );
-        contactNoFieldLayout.setVerticalGroup(
-            contactNoFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contactNoFieldLayout.createSequentialGroup()
-                .addComponent(jLabel11)
+        contactNoLayout.setVerticalGroup(
+            contactNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contactNoLayout.createSequentialGroup()
+                .addComponent(contactNoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(contactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel12.setText("Weight/Timbang (Kilograms)");
+        weightLabel.setText("Weight/Timbang (Kilograms)");
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        weightField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                weightFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout weightFieldLayout = new javax.swing.GroupLayout(weightField);
-        weightField.setLayout(weightFieldLayout);
-        weightFieldLayout.setHorizontalGroup(
-            weightFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(weightFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout weightLayout = new javax.swing.GroupLayout(weight);
+        weight.setLayout(weightLayout);
+        weightLayout.setHorizontalGroup(
+            weightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(weightLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel12))
+                .addComponent(weightLabel))
         );
-        weightFieldLayout.setVerticalGroup(
-            weightFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(weightFieldLayout.createSequentialGroup()
-                .addComponent(jLabel12)
+        weightLayout.setVerticalGroup(
+            weightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(weightLayout.createSequentialGroup()
+                .addComponent(weightLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel13.setText("Height/Taas (Meters)");
+        heightLabel.setText("Height/Taas (Meters)");
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        heightField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                heightFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout heightFieldLayout = new javax.swing.GroupLayout(heightField);
-        heightField.setLayout(heightFieldLayout);
-        heightFieldLayout.setHorizontalGroup(
-            heightFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(heightFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout heightLayout = new javax.swing.GroupLayout(height);
+        height.setLayout(heightLayout);
+        heightLayout.setHorizontalGroup(
+            heightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(heightLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel13))
-            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(heightLabel))
+            .addComponent(heightField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        heightFieldLayout.setVerticalGroup(
-            heightFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(heightFieldLayout.createSequentialGroup()
-                .addComponent(jLabel13)
+        heightLayout.setVerticalGroup(
+            heightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(heightLayout.createSequentialGroup()
+                .addComponent(heightLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(heightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel14.setText("Civil Status");
+        civilStatusLabel.setText("Civil Status");
 
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        civilStatusField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                civilStatusFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout civilStatusFieldLayout = new javax.swing.GroupLayout(civilStatusField);
-        civilStatusField.setLayout(civilStatusFieldLayout);
-        civilStatusFieldLayout.setHorizontalGroup(
-            civilStatusFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(civilStatusFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout civilStatusLayout = new javax.swing.GroupLayout(civilStatus);
+        civilStatus.setLayout(civilStatusLayout);
+        civilStatusLayout.setHorizontalGroup(
+            civilStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(civilStatusField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(civilStatusLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14))
+                .addComponent(civilStatusLabel))
         );
-        civilStatusFieldLayout.setVerticalGroup(
-            civilStatusFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(civilStatusFieldLayout.createSequentialGroup()
-                .addComponent(jLabel14)
+        civilStatusLayout.setVerticalGroup(
+            civilStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(civilStatusLayout.createSequentialGroup()
+                .addComponent(civilStatusLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(civilStatusField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel15.setText("Religion");
+        religionLabel.setText("Religion");
 
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        religionField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                religionFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout religionFieldLayout = new javax.swing.GroupLayout(religionField);
-        religionField.setLayout(religionFieldLayout);
-        religionFieldLayout.setHorizontalGroup(
-            religionFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(religionFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout religionLayout = new javax.swing.GroupLayout(religion);
+        religion.setLayout(religionLayout);
+        religionLayout.setHorizontalGroup(
+            religionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(religionField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(religionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel15))
+                .addComponent(religionLabel))
         );
-        religionFieldLayout.setVerticalGroup(
-            religionFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(religionFieldLayout.createSequentialGroup()
-                .addComponent(jLabel15)
+        religionLayout.setVerticalGroup(
+            religionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(religionLayout.createSequentialGroup()
+                .addComponent(religionLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(religionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel16.setText("House/Blg No and Street");
+        houseNoAndStreetLabel.setText("House/Blg No and Street");
 
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        houseNoAndStreetField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                houseNoAndStreetFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout houseNoAndStreetFieldLayout = new javax.swing.GroupLayout(houseNoAndStreetField);
-        houseNoAndStreetField.setLayout(houseNoAndStreetFieldLayout);
-        houseNoAndStreetFieldLayout.setHorizontalGroup(
-            houseNoAndStreetFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(houseNoAndStreetFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout houseNoAndStreetLayout = new javax.swing.GroupLayout(houseNoAndStreet);
+        houseNoAndStreet.setLayout(houseNoAndStreetLayout);
+        houseNoAndStreetLayout.setHorizontalGroup(
+            houseNoAndStreetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(houseNoAndStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(houseNoAndStreetLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16))
+                .addComponent(houseNoAndStreetLabel))
         );
-        houseNoAndStreetFieldLayout.setVerticalGroup(
-            houseNoAndStreetFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(houseNoAndStreetFieldLayout.createSequentialGroup()
-                .addComponent(jLabel16)
+        houseNoAndStreetLayout.setVerticalGroup(
+            houseNoAndStreetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(houseNoAndStreetLayout.createSequentialGroup()
+                .addComponent(houseNoAndStreetLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(houseNoAndStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         addressSubheader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         addressSubheader.setForeground(ThemeColors.ON_SURFACE);
         addressSubheader.setText("Address");
 
-        jLabel18.setText("Province (Probinsya)");
+        provinceLabel.setText("Province (Probinsya)");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        provinceComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        javax.swing.GroupLayout provinceFieldLayout = new javax.swing.GroupLayout(provinceField);
-        provinceField.setLayout(provinceFieldLayout);
-        provinceFieldLayout.setHorizontalGroup(
-            provinceFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provinceFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout provinceLayout = new javax.swing.GroupLayout(province);
+        province.setLayout(provinceLayout);
+        provinceLayout.setHorizontalGroup(
+            provinceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(provinceLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jLabel18)
+                .addComponent(provinceLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(provinceFieldLayout.createSequentialGroup()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(provinceLayout.createSequentialGroup()
+                .addComponent(provinceComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        provinceFieldLayout.setVerticalGroup(
-            provinceFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(provinceFieldLayout.createSequentialGroup()
-                .addComponent(jLabel18)
+        provinceLayout.setVerticalGroup(
+            provinceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(provinceLayout.createSequentialGroup()
+                .addComponent(provinceLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(provinceComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel19.setText("City/Municipality (Bayan)");
+        cityMunicipalityLabel.setText("City/Municipality (Bayan)");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cityMunicipalityComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        javax.swing.GroupLayout cityMunicipalityFieldLayout = new javax.swing.GroupLayout(cityMunicipalityField);
-        cityMunicipalityField.setLayout(cityMunicipalityFieldLayout);
-        cityMunicipalityFieldLayout.setHorizontalGroup(
-            cityMunicipalityFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cityMunicipalityFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout cityMunicipalityLayout = new javax.swing.GroupLayout(cityMunicipality);
+        cityMunicipality.setLayout(cityMunicipalityLayout);
+        cityMunicipalityLayout.setHorizontalGroup(
+            cityMunicipalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cityMunicipalityLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel19)
+                .addComponent(cityMunicipalityLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(cityMunicipalityFieldLayout.createSequentialGroup()
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(cityMunicipalityLayout.createSequentialGroup()
+                .addComponent(cityMunicipalityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        cityMunicipalityFieldLayout.setVerticalGroup(
-            cityMunicipalityFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cityMunicipalityFieldLayout.createSequentialGroup()
-                .addComponent(jLabel19)
+        cityMunicipalityLayout.setVerticalGroup(
+            cityMunicipalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cityMunicipalityLayout.createSequentialGroup()
+                .addComponent(cityMunicipalityLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(cityMunicipalityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel20.setText("Barangay");
+        barangayLabel.setText("Barangay");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        barangayComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        javax.swing.GroupLayout barangayFieldLayout = new javax.swing.GroupLayout(barangayField);
-        barangayField.setLayout(barangayFieldLayout);
-        barangayFieldLayout.setHorizontalGroup(
-            barangayFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(barangayFieldLayout.createSequentialGroup()
-                .addGroup(barangayFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(barangayFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout barangayLayout = new javax.swing.GroupLayout(barangay);
+        barangay.setLayout(barangayLayout);
+        barangayLayout.setHorizontalGroup(
+            barangayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(barangayLayout.createSequentialGroup()
+                .addGroup(barangayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(barangayLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel20))
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(barangayLabel))
+                    .addComponent(barangayComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0))
         );
-        barangayFieldLayout.setVerticalGroup(
-            barangayFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(barangayFieldLayout.createSequentialGroup()
-                .addComponent(jLabel20)
+        barangayLayout.setVerticalGroup(
+            barangayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(barangayLayout.createSequentialGroup()
+                .addComponent(barangayLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(barangayComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel21.setText("Birthplace (Lugar ng Kapanganakan)");
+        birthplaceLabel.setText("Birthplace (Lugar ng Kapanganakan)");
 
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        birthplaceField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                birthplaceFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout birthplaceFieldLayout = new javax.swing.GroupLayout(birthplaceField);
-        birthplaceField.setLayout(birthplaceFieldLayout);
-        birthplaceFieldLayout.setHorizontalGroup(
-            birthplaceFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(birthplaceFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout birthplaceLayout = new javax.swing.GroupLayout(birthplace);
+        birthplace.setLayout(birthplaceLayout);
+        birthplaceLayout.setHorizontalGroup(
+            birthplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(birthplaceLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel21)
+                .addComponent(birthplaceLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jTextField16)
+            .addComponent(birthplaceField)
         );
-        birthplaceFieldLayout.setVerticalGroup(
-            birthplaceFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(birthplaceFieldLayout.createSequentialGroup()
-                .addComponent(jLabel21)
+        birthplaceLayout.setVerticalGroup(
+            birthplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(birthplaceLayout.createSequentialGroup()
+                .addComponent(birthplaceLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(birthplaceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         mothersNameDetailsSubheader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         mothersNameDetailsSubheader.setForeground(ThemeColors.ON_SURFACE);
         mothersNameDetailsSubheader.setText("Mother's Name Details");
 
-        jLabel23.setText("Maiden First Name");
+        maidenFirstNameLabel.setText("Maiden First Name");
 
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        maidenFirstNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                maidenFirstNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout maidenFirstNameFieldLayout = new javax.swing.GroupLayout(maidenFirstNameField);
-        maidenFirstNameField.setLayout(maidenFirstNameFieldLayout);
-        maidenFirstNameFieldLayout.setHorizontalGroup(
-            maidenFirstNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(maidenFirstNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout maidenFirstNameLayout = new javax.swing.GroupLayout(maidenFirstName);
+        maidenFirstName.setLayout(maidenFirstNameLayout);
+        maidenFirstNameLayout.setHorizontalGroup(
+            maidenFirstNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(maidenFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(maidenFirstNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel23))
+                .addComponent(maidenFirstNameLabel))
         );
-        maidenFirstNameFieldLayout.setVerticalGroup(
-            maidenFirstNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(maidenFirstNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel23)
+        maidenFirstNameLayout.setVerticalGroup(
+            maidenFirstNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maidenFirstNameLayout.createSequentialGroup()
+                .addComponent(maidenFirstNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(maidenFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel24.setText("Maiden Middle Name");
+        maidenMiddleNameLabel.setText("Maiden Middle Name");
 
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        maidenMiddleNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                maidenMiddleNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout maidenMiddleNameFieldLayout = new javax.swing.GroupLayout(maidenMiddleNameField);
-        maidenMiddleNameField.setLayout(maidenMiddleNameFieldLayout);
-        maidenMiddleNameFieldLayout.setHorizontalGroup(
-            maidenMiddleNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(maidenMiddleNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout maidenMiddleNameLayout = new javax.swing.GroupLayout(maidenMiddleName);
+        maidenMiddleName.setLayout(maidenMiddleNameLayout);
+        maidenMiddleNameLayout.setHorizontalGroup(
+            maidenMiddleNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(maidenMiddleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(maidenMiddleNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel24))
+                .addComponent(maidenMiddleNameLabel))
         );
-        maidenMiddleNameFieldLayout.setVerticalGroup(
-            maidenMiddleNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(maidenMiddleNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel24)
+        maidenMiddleNameLayout.setVerticalGroup(
+            maidenMiddleNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maidenMiddleNameLayout.createSequentialGroup()
+                .addComponent(maidenMiddleNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(maidenMiddleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel25.setText("Maiden Last Name");
+        maidenLastNameLabel.setText("Maiden Last Name");
 
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        maidenLastNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                maidenLastNameFieldActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout maidenLastNameFieldLayout = new javax.swing.GroupLayout(maidenLastNameField);
-        maidenLastNameField.setLayout(maidenLastNameFieldLayout);
-        maidenLastNameFieldLayout.setHorizontalGroup(
-            maidenLastNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(maidenLastNameFieldLayout.createSequentialGroup()
+        javax.swing.GroupLayout maidenLastNameLayout = new javax.swing.GroupLayout(maidenLastName);
+        maidenLastName.setLayout(maidenLastNameLayout);
+        maidenLastNameLayout.setHorizontalGroup(
+            maidenLastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(maidenLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(maidenLastNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25))
+                .addComponent(maidenLastNameLabel))
         );
-        maidenLastNameFieldLayout.setVerticalGroup(
-            maidenLastNameFieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(maidenLastNameFieldLayout.createSequentialGroup()
-                .addComponent(jLabel25)
+        maidenLastNameLayout.setVerticalGroup(
+            maidenLastNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(maidenLastNameLayout.createSequentialGroup()
+                .addComponent(maidenLastNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(maidenLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout identificationsPanelLayout = new javax.swing.GroupLayout(identificationsPanel);
@@ -708,54 +708,54 @@ public class MyProfile extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(mobileNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(mobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(contactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(contactNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(heightField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(height, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(civilStatusField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(civilStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(religionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(religion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(addressSubheader)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(myProfileHeader)
                         .addGap(18, 18, 18)
                         .addComponent(editProfileButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(dateOfBirthField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(genderField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(emailAddressField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(emailAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(middleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(suffix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(birthplaceField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(birthplace, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(houseNoAndStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(houseNoAndStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(provinceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(province, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(cityMunicipalityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cityMunicipality, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(barangayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(barangay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(mothersNameDetailsSubheader)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(maidenFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(maidenFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(maidenMiddleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(maidenMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(maidenLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(maidenLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(identificationsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -777,13 +777,13 @@ public class MyProfile extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(190, 190, 190)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(mobileNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(contactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(weightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(mobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(contactNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(civilStatusField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(religionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(civilStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(religion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(addressSubheader)
@@ -805,112 +805,112 @@ public class MyProfile extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(middleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(suffixField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(middleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(suffix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dateOfBirthField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(genderField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(emailAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(heightField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(identificationsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(houseNoAndStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(provinceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cityMunicipalityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(barangayField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(houseNoAndStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(province, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cityMunicipality, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(barangay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(birthplaceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(birthplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(mothersNameDetailsSubheader)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(maidenFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maidenMiddleNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maidenLastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(maidenFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(maidenMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(maidenLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(myFamilyScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void firstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_firstNameFieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void middleNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middleNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_middleNameFieldActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void lastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_lastNameFieldActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void suffixFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suffixFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_suffixFieldActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void genderFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_genderFieldActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void emailAddressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailAddressFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_emailAddressFieldActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void mobileNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mobileNoFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_mobileNoFieldActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void dateOfBirthFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateOfBirthFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_dateOfBirthFieldActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void contactNoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactNoFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_contactNoFieldActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void weightFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weightFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_weightFieldActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void heightFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heightFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_heightFieldActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void civilStatusFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_civilStatusFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_civilStatusFieldActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void religionFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_religionFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_religionFieldActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void houseNoAndStreetFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseNoAndStreetFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_houseNoAndStreetFieldActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void birthplaceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthplaceFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_birthplaceFieldActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void maidenFirstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maidenFirstNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_maidenFirstNameFieldActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void maidenMiddleNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maidenMiddleNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_maidenMiddleNameFieldActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void maidenLastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maidenLastNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_maidenLastNameFieldActionPerformed
 
     private void addIdentificationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addIdentificationsButtonActionPerformed
         // TODO add your handling code here:
@@ -925,77 +925,77 @@ public class MyProfile extends javax.swing.JPanel {
     private javax.swing.JButton addBeneficiariesButton;
     private javax.swing.JButton addIdentificationsButton;
     private javax.swing.JLabel addressSubheader;
-    private javax.swing.JPanel barangayField;
-    private javax.swing.JPanel birthplaceField;
-    private javax.swing.JPanel cityMunicipalityField;
-    private javax.swing.JPanel civilStatusField;
-    private javax.swing.JPanel contactNoField;
-    private javax.swing.JPanel dateOfBirthField;
+    private javax.swing.JPanel barangay;
+    private javax.swing.JComboBox<String> barangayComboBox;
+    private javax.swing.JLabel barangayLabel;
+    private javax.swing.JPanel birthplace;
+    private javax.swing.JTextField birthplaceField;
+    private javax.swing.JLabel birthplaceLabel;
+    private javax.swing.JPanel cityMunicipality;
+    private javax.swing.JComboBox<String> cityMunicipalityComboBox;
+    private javax.swing.JLabel cityMunicipalityLabel;
+    private javax.swing.JPanel civilStatus;
+    private javax.swing.JTextField civilStatusField;
+    private javax.swing.JLabel civilStatusLabel;
+    private javax.swing.JPanel contactNo;
+    private javax.swing.JTextField contactNoField;
+    private javax.swing.JLabel contactNoLabel;
+    private javax.swing.JPanel dateOfBirth;
+    private javax.swing.JTextField dateOfBirthField;
+    private javax.swing.JLabel dateOfBirthLabel;
     private javax.swing.JButton editProfileButton;
-    private javax.swing.JPanel emailAddressField;
-    private javax.swing.JPanel firstNameField;
-    private javax.swing.JPanel genderField;
-    private javax.swing.JPanel heightField;
-    private javax.swing.JPanel houseNoAndStreetField;
+    private javax.swing.JPanel emailAddress;
+    private javax.swing.JTextField emailAddressField;
+    private javax.swing.JLabel emailAddressLabel;
+    private javax.swing.JPanel firstName;
+    private javax.swing.JTextField firstNameField;
+    private javax.swing.JLabel firstNameLabel;
+    private javax.swing.JPanel gender;
+    private javax.swing.JTextField genderField;
+    private javax.swing.JLabel genderLabel;
+    private javax.swing.JPanel height;
+    private javax.swing.JTextField heightField;
+    private javax.swing.JLabel heightLabel;
+    private javax.swing.JPanel houseNoAndStreet;
+    private javax.swing.JTextField houseNoAndStreetField;
+    private javax.swing.JLabel houseNoAndStreetLabel;
     private javax.swing.JPanel identificationsPanel;
     private javax.swing.JScrollPane identificationsScrollPane;
     private javax.swing.JLabel identificationsSubheader;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JPanel lastNameField;
-    private javax.swing.JPanel maidenFirstNameField;
-    private javax.swing.JPanel maidenLastNameField;
-    private javax.swing.JPanel maidenMiddleNameField;
-    private javax.swing.JPanel middleNameField;
-    private javax.swing.JPanel mobileNoField;
+    private javax.swing.JPanel lastName;
+    private javax.swing.JTextField lastNameField;
+    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JPanel maidenFirstName;
+    private javax.swing.JTextField maidenFirstNameField;
+    private javax.swing.JLabel maidenFirstNameLabel;
+    private javax.swing.JPanel maidenLastName;
+    private javax.swing.JTextField maidenLastNameField;
+    private javax.swing.JLabel maidenLastNameLabel;
+    private javax.swing.JPanel maidenMiddleName;
+    private javax.swing.JTextField maidenMiddleNameField;
+    private javax.swing.JLabel maidenMiddleNameLabel;
+    private javax.swing.JPanel middleName;
+    private javax.swing.JTextField middleNameField;
+    private javax.swing.JLabel middleNameLabel;
+    private javax.swing.JPanel mobileNo;
+    private javax.swing.JTextField mobileNoField;
+    private javax.swing.JLabel mobileNoLabel;
     private javax.swing.JLabel mothersNameDetailsSubheader;
     private javax.swing.JPanel myFamilyPanel;
     private javax.swing.JScrollPane myFamilyScrollPane;
     private javax.swing.JLabel myFamilySubheader;
     private javax.swing.JLabel myProfileHeader;
-    private javax.swing.JPanel provinceField;
-    private javax.swing.JPanel religionField;
-    private javax.swing.JPanel suffixField;
-    private javax.swing.JPanel weightField;
+    private javax.swing.JPanel province;
+    private javax.swing.JComboBox<String> provinceComboBox;
+    private javax.swing.JLabel provinceLabel;
+    private javax.swing.JPanel religion;
+    private javax.swing.JTextField religionField;
+    private javax.swing.JLabel religionLabel;
+    private javax.swing.JPanel suffix;
+    private javax.swing.JTextField suffixField;
+    private javax.swing.JLabel suffixLabel;
+    private javax.swing.JPanel weight;
+    private javax.swing.JTextField weightField;
+    private javax.swing.JLabel weightLabel;
     // End of variables declaration//GEN-END:variables
 }
