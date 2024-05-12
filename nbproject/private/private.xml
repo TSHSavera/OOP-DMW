@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Main.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Cards/DashboardHome.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Components/SideNavigationBar.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Components/JobsPanel.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Layouts/DashboardLayout.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Components/TopNavigationBar.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Utilities/RoundedPanel.java</file>
-            <file>file:/D:/Coding%20Stuff/Java_prog/OOP_DMW_POEA/OOP_DMW_POEA/src/Resources/Resources.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Main.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Cards/DashboardHome.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Cards/MyProfile.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Components/JobsPanel.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Layouts/DashboardLayout.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Components/SideNavigationBar.java</file>
+            <file>file:/home/roehl/Documents/GitHub/OOP-DMW/src/Components/LabeledTextField.java</file>
         </group>
     </open-files>
 </project-private>
