@@ -15,6 +15,7 @@ public class DashboardExtras extends javax.swing.JPanel {
      */
     public DashboardExtras() {
         initComponents();
+        dashboardUserInfo1.setVisible(false);
     }
 
     /**
@@ -26,12 +27,6 @@ public class DashboardExtras extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        profilePicturePanel = new javax.swing.JPanel();
-        profilePictureIMG = new javax.swing.JLabel();
-        passportPicturePanel = new javax.swing.JPanel();
-        passportPictureIMG = new javax.swing.JLabel();
-        attachPassport = new javax.swing.JButton();
-        attachProfile = new javax.swing.JButton();
         announcementsPanel = new javax.swing.JPanel();
         announcementTitleBar = new javax.swing.JPanel();
         announcments = new javax.swing.JLabel();
@@ -45,77 +40,11 @@ public class DashboardExtras extends javax.swing.JPanel {
         reminder1_us = new javax.swing.JLabel();
         reminder1_ph = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        userDetails = new javax.swing.JPanel();
-        accountNumber = new javax.swing.JLabel();
-        userName = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        showUserInfo = new javax.swing.JButton();
+        dashboardUserInfo1 = new Components.DashboardUserInfo();
 
         setBackground(ThemeColors.BACKGROUND);
-
-        profilePicturePanel.setBackground(ThemeColors.ON_SURFACE);
-        profilePicturePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 2));
-        profilePicturePanel.setPreferredSize(new java.awt.Dimension(165, 165));
-
-        profilePictureIMG.setText("profile picture");
-
-        javax.swing.GroupLayout profilePicturePanelLayout = new javax.swing.GroupLayout(profilePicturePanel);
-        profilePicturePanel.setLayout(profilePicturePanelLayout);
-        profilePicturePanelLayout.setHorizontalGroup(
-            profilePicturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profilePicturePanelLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(profilePictureIMG)
-                .addGap(44, 44, 44))
-        );
-        profilePicturePanelLayout.setVerticalGroup(
-            profilePicturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(profilePicturePanelLayout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(profilePictureIMG)
-                .addContainerGap(71, Short.MAX_VALUE))
-        );
-
-        passportPicturePanel.setBackground(ThemeColors.ON_SURFACE);
-        passportPicturePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        passportPicturePanel.setPreferredSize(new java.awt.Dimension(165, 165));
-
-        passportPictureIMG.setText("passport picture");
-
-        javax.swing.GroupLayout passportPicturePanelLayout = new javax.swing.GroupLayout(passportPicturePanel);
-        passportPicturePanel.setLayout(passportPicturePanelLayout);
-        passportPicturePanelLayout.setHorizontalGroup(
-            passportPicturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, passportPicturePanelLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
-                .addComponent(passportPictureIMG)
-                .addGap(36, 36, 36))
-        );
-        passportPicturePanelLayout.setVerticalGroup(
-            passportPicturePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(passportPicturePanelLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(passportPictureIMG)
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
-
-        attachPassport.setBackground(ThemeColors.PRIMARY);
-        attachPassport.setForeground(ThemeColors.ON_PRIMARY);
-        attachPassport.setText("Attach Picture");
-        attachPassport.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        attachPassport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                attachPassportActionPerformed(evt);
-            }
-        });
-
-        attachProfile.setBackground(ThemeColors.PRIMARY);
-        attachProfile.setForeground(ThemeColors.ON_PRIMARY);
-        attachProfile.setText("Attach Picture");
-        attachProfile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        attachProfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                attachProfileActionPerformed(evt);
-            }
-        });
 
         announcementsPanel.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
 
@@ -133,7 +62,7 @@ public class DashboardExtras extends javax.swing.JPanel {
             .addGroup(announcementTitleBarLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(announcments)
-                .addContainerGap(445, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         announcementTitleBarLayout.setVerticalGroup(
             announcementTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +82,7 @@ public class DashboardExtras extends javax.swing.JPanel {
             announcementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(announcementsPanelLayout.createSequentialGroup()
                 .addComponent(announcementTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 398, Short.MAX_VALUE))
         );
 
         links_etc.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
@@ -172,7 +101,7 @@ public class DashboardExtras extends javax.swing.JPanel {
             .addGroup(linksTitleBarLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel5)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         linksTitleBarLayout.setVerticalGroup(
             linksTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,14 +170,14 @@ public class DashboardExtras extends javax.swing.JPanel {
         remindersPanelLayout.setHorizontalGroup(
             remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(remindersTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jSeparator1)
             .addGroup(remindersPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(reminder1_us)
                     .addComponent(reminder1_ph_2)
                     .addComponent(reminder1_ph))
-                .addContainerGap(32, Short.MAX_VALUE))
-            .addComponent(jSeparator1)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         remindersPanelLayout.setVerticalGroup(
             remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,38 +191,36 @@ public class DashboardExtras extends javax.swing.JPanel {
                 .addComponent(reminder1_ph)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(reminder1_ph_2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 57, Short.MAX_VALUE))
         );
 
-        userDetails.setOpaque(false);
+        jPanel1.setBackground(ThemeColors.BACKGROUND);
 
-        accountNumber.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        accountNumber.setForeground(ThemeColors.ON_BACKGROUND);
-        accountNumber.setText("Account no.");
+        showUserInfo.setBackground(ThemeColors.PRIMARY);
+        showUserInfo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        showUserInfo.setForeground(ThemeColors.ON_PRIMARY);
+        showUserInfo.setText("Show User Information");
+        showUserInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        showUserInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showUserInfoActionPerformed(evt);
+            }
+        });
 
-        userName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        userName.setForeground(ThemeColors.ON_BACKGROUND);
-        userName.setText("Lastname, Firstname MI.");
-
-        javax.swing.GroupLayout userDetailsLayout = new javax.swing.GroupLayout(userDetails);
-        userDetails.setLayout(userDetailsLayout);
-        userDetailsLayout.setHorizontalGroup(
-            userDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userDetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(userDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(accountNumber)
-                    .addComponent(userName, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addComponent(showUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
-        userDetailsLayout.setVerticalGroup(
-            userDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userDetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(accountNumber)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userName)
-                .addContainerGap(22, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(showUserInfo)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -301,89 +228,67 @@ public class DashboardExtras extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dashboardUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(attachPassport))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(passportPicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(profilePicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(attachProfile))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(userDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(remindersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(announcementsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(links_etc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(announcementsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(remindersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(links_etc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(links_etc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(profilePicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(attachProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(remindersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(links_etc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(passportPicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(attachPassport, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(remindersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(userDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(71, Short.MAX_VALUE))
-                    .addComponent(announcementsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(announcementsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(dashboardUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void attachPassportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attachPassportActionPerformed
-        // replace jlabel "passportPictureIMG" with passport picture
-    }//GEN-LAST:event_attachPassportActionPerformed
-
-    private void attachProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attachProfileActionPerformed
-        // replace jlabel "profilePictureIMG" with profile picure
-    }//GEN-LAST:event_attachProfileActionPerformed
-
+    
+    
+    private void showUserInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showUserInfoActionPerformed
+        // TODO add your handling code here:
+        if (dashboardUserInfo1.isVisible()) {
+            dashboardUserInfo1.setVisible(false);
+            showUserInfo.setText("Show User Information");
+        } else {
+            dashboardUserInfo1.setVisible(true);
+            showUserInfo.setText("Hide User Information");
+        }
+    }//GEN-LAST:event_showUserInfoActionPerformed
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel accountNumber;
     private javax.swing.JPanel announcementTitleBar;
     private javax.swing.JPanel announcementsPanel;
     private javax.swing.JLabel announcments;
-    private javax.swing.JButton attachPassport;
-    private javax.swing.JButton attachProfile;
+    private Components.DashboardUserInfo dashboardUserInfo1;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel linksTitleBar;
     private javax.swing.JPanel links_etc;
-    private javax.swing.JLabel passportPictureIMG;
-    private javax.swing.JPanel passportPicturePanel;
-    private javax.swing.JLabel profilePictureIMG;
-    private javax.swing.JPanel profilePicturePanel;
     private javax.swing.JLabel reminder1_ph;
     private javax.swing.JLabel reminder1_ph_2;
     private javax.swing.JLabel reminder1_us;
     private javax.swing.JLabel reminders;
     private javax.swing.JPanel remindersPanel;
     private javax.swing.JPanel remindersTitleBar;
-    private javax.swing.JPanel userDetails;
-    private javax.swing.JLabel userName;
+    private javax.swing.JButton showUserInfo;
     // End of variables declaration//GEN-END:variables
 }
