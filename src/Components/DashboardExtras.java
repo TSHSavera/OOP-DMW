@@ -15,7 +15,7 @@ public class DashboardExtras extends javax.swing.JPanel {
      */
     public DashboardExtras() {
         initComponents();
-        dashboardUserInfo1.setVisible(false);
+        dashboardUserInfo.setVisible(false);
     }
 
     /**
@@ -27,33 +27,37 @@ public class DashboardExtras extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        announcementsPanel = new javax.swing.JPanel();
+        jobVacanciesPanel = new javax.swing.JPanel();
         announcementTitleBar = new javax.swing.JPanel();
         announcments = new javax.swing.JLabel();
-        links_etc = new javax.swing.JPanel();
-        linksTitleBar = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        guides = new javax.swing.JPanel();
+        GuidesTitleBar = new javax.swing.JPanel();
+        guideLabel = new javax.swing.JLabel();
         remindersPanel = new javax.swing.JPanel();
         remindersTitleBar = new javax.swing.JPanel();
         reminders = new javax.swing.JLabel();
-        reminder1_ph_2 = new javax.swing.JLabel();
         reminder1_us = new javax.swing.JLabel();
         reminder1_ph = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         showUserInfo = new javax.swing.JButton();
-        dashboardUserInfo1 = new Components.DashboardUserInfo();
+        links_etc1 = new javax.swing.JPanel();
+        linksTitleBar1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        dashboardUserInfo = new Components.DashboardUserInfo();
+        announcementsPanel1 = new javax.swing.JPanel();
+        announcementTitleBar1 = new javax.swing.JPanel();
+        announcments1 = new javax.swing.JLabel();
 
         setBackground(ThemeColors.BACKGROUND);
 
-        announcementsPanel.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
+        jobVacanciesPanel.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
 
         announcementTitleBar.setBackground(ThemeColors.SURFACE_VARIANT);
         announcementTitleBar.setForeground(new java.awt.Color(255, 255, 255));
 
         announcments.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         announcments.setForeground(ThemeColors.ON_SURFACE);
-        announcments.setText("Announcements");
+        announcments.setText("Job Vacancies");
 
         javax.swing.GroupLayout announcementTitleBarLayout = new javax.swing.GroupLayout(announcementTitleBar);
         announcementTitleBar.setLayout(announcementTitleBarLayout);
@@ -72,56 +76,56 @@ public class DashboardExtras extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout announcementsPanelLayout = new javax.swing.GroupLayout(announcementsPanel);
-        announcementsPanel.setLayout(announcementsPanelLayout);
-        announcementsPanelLayout.setHorizontalGroup(
-            announcementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jobVacanciesPanelLayout = new javax.swing.GroupLayout(jobVacanciesPanel);
+        jobVacanciesPanel.setLayout(jobVacanciesPanelLayout);
+        jobVacanciesPanelLayout.setHorizontalGroup(
+            jobVacanciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(announcementTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        announcementsPanelLayout.setVerticalGroup(
-            announcementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(announcementsPanelLayout.createSequentialGroup()
+        jobVacanciesPanelLayout.setVerticalGroup(
+            jobVacanciesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jobVacanciesPanelLayout.createSequentialGroup()
                 .addComponent(announcementTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 398, Short.MAX_VALUE))
+                .addGap(0, 529, Short.MAX_VALUE))
         );
 
-        links_etc.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
+        guides.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
 
-        linksTitleBar.setBackground(ThemeColors.SURFACE_VARIANT);
-        linksTitleBar.setForeground(new java.awt.Color(255, 255, 255));
+        GuidesTitleBar.setBackground(ThemeColors.SURFACE_VARIANT);
+        GuidesTitleBar.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(ThemeColors.ON_SURFACE);
-        jLabel5.setText("Links");
+        guideLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        guideLabel.setForeground(ThemeColors.ON_SURFACE);
+        guideLabel.setText("Guides");
 
-        javax.swing.GroupLayout linksTitleBarLayout = new javax.swing.GroupLayout(linksTitleBar);
-        linksTitleBar.setLayout(linksTitleBarLayout);
-        linksTitleBarLayout.setHorizontalGroup(
-            linksTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(linksTitleBarLayout.createSequentialGroup()
+        javax.swing.GroupLayout GuidesTitleBarLayout = new javax.swing.GroupLayout(GuidesTitleBar);
+        GuidesTitleBar.setLayout(GuidesTitleBarLayout);
+        GuidesTitleBarLayout.setHorizontalGroup(
+            GuidesTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuidesTitleBarLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel5)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addComponent(guideLabel)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
-        linksTitleBarLayout.setVerticalGroup(
-            linksTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(linksTitleBarLayout.createSequentialGroup()
+        GuidesTitleBarLayout.setVerticalGroup(
+            GuidesTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuidesTitleBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addComponent(guideLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout links_etcLayout = new javax.swing.GroupLayout(links_etc);
-        links_etc.setLayout(links_etcLayout);
-        links_etcLayout.setHorizontalGroup(
-            links_etcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(linksTitleBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout guidesLayout = new javax.swing.GroupLayout(guides);
+        guides.setLayout(guidesLayout);
+        guidesLayout.setHorizontalGroup(
+            guidesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(GuidesTitleBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        links_etcLayout.setVerticalGroup(
-            links_etcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(links_etcLayout.createSequentialGroup()
-                .addComponent(linksTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+        guidesLayout.setVerticalGroup(
+            guidesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(guidesLayout.createSequentialGroup()
+                .addComponent(GuidesTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 351, Short.MAX_VALUE))
         );
 
         remindersPanel.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
@@ -150,10 +154,6 @@ public class DashboardExtras extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        reminder1_ph_2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        reminder1_ph_2.setForeground(ThemeColors.ON_SURFACE);
-        reminder1_ph_2.setText("ise-save para sa pagproseso");
-
         reminder1_us.setBackground(ThemeColors.ON_SURFACE);
         reminder1_us.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         reminder1_us.setForeground(ThemeColors.ON_SURFACE);
@@ -161,23 +161,19 @@ public class DashboardExtras extends javax.swing.JPanel {
 
         reminder1_ph.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         reminder1_ph.setForeground(ThemeColors.ON_SURFACE);
-        reminder1_ph.setText("Siguraduhin na ang lahat ng iyong impormasyon ay tama at totoo dahil ang lahat ng ito ay");
-
-        jSeparator1.setForeground(ThemeColors.ON_SURFACE_VARIANT);
+        reminder1_ph.setText("Siguraduhin na ang lahat ng iyong impormasyon ay tama at totoo dahil ang lahat ng ito ay ise-save para sa pagproseso");
 
         javax.swing.GroupLayout remindersPanelLayout = new javax.swing.GroupLayout(remindersPanel);
         remindersPanel.setLayout(remindersPanelLayout);
         remindersPanelLayout.setHorizontalGroup(
             remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(remindersTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jSeparator1)
             .addGroup(remindersPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(reminder1_us)
-                    .addComponent(reminder1_ph_2)
                     .addComponent(reminder1_ph))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         remindersPanelLayout.setVerticalGroup(
             remindersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,13 +181,9 @@ public class DashboardExtras extends javax.swing.JPanel {
                 .addComponent(remindersTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(reminder1_us)
-                .addGap(4, 4, 4)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(14, 14, 14)
                 .addComponent(reminder1_ph)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reminder1_ph_2)
-                .addGap(0, 57, Short.MAX_VALUE))
+                .addGap(0, 74, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(ThemeColors.BACKGROUND);
@@ -211,10 +203,10 @@ public class DashboardExtras extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(showUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,21 +215,104 @@ public class DashboardExtras extends javax.swing.JPanel {
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
+        links_etc1.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
+
+        linksTitleBar1.setBackground(ThemeColors.SURFACE_VARIANT);
+        linksTitleBar1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(ThemeColors.ON_SURFACE);
+        jLabel6.setText("Links");
+
+        javax.swing.GroupLayout linksTitleBar1Layout = new javax.swing.GroupLayout(linksTitleBar1);
+        linksTitleBar1.setLayout(linksTitleBar1Layout);
+        linksTitleBar1Layout.setHorizontalGroup(
+            linksTitleBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(linksTitleBar1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        linksTitleBar1Layout.setVerticalGroup(
+            linksTitleBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(linksTitleBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout links_etc1Layout = new javax.swing.GroupLayout(links_etc1);
+        links_etc1.setLayout(links_etc1Layout);
+        links_etc1Layout.setHorizontalGroup(
+            links_etc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(linksTitleBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        links_etc1Layout.setVerticalGroup(
+            links_etc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(links_etc1Layout.createSequentialGroup()
+                .addComponent(linksTitleBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 318, Short.MAX_VALUE))
+        );
+
+        announcementsPanel1.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
+
+        announcementTitleBar1.setBackground(ThemeColors.SURFACE_VARIANT);
+        announcementTitleBar1.setForeground(new java.awt.Color(255, 255, 255));
+
+        announcments1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        announcments1.setForeground(ThemeColors.ON_SURFACE);
+        announcments1.setText("Announcements");
+
+        javax.swing.GroupLayout announcementTitleBar1Layout = new javax.swing.GroupLayout(announcementTitleBar1);
+        announcementTitleBar1.setLayout(announcementTitleBar1Layout);
+        announcementTitleBar1Layout.setHorizontalGroup(
+            announcementTitleBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(announcementTitleBar1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(announcments1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        announcementTitleBar1Layout.setVerticalGroup(
+            announcementTitleBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(announcementTitleBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(announcments1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout announcementsPanel1Layout = new javax.swing.GroupLayout(announcementsPanel1);
+        announcementsPanel1.setLayout(announcementsPanel1Layout);
+        announcementsPanel1Layout.setHorizontalGroup(
+            announcementsPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(announcementTitleBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        announcementsPanel1Layout.setVerticalGroup(
+            announcementsPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(announcementsPanel1Layout.createSequentialGroup()
+                .addComponent(announcementTitleBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 529, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(dashboardUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(announcementsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(remindersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dashboardUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(links_etc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(announcementsPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jobVacanciesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(remindersPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(guides, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(links_etc1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -245,16 +320,21 @@ public class DashboardExtras extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(links_etc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(links_etc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(guides, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(remindersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(announcementsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(announcementsPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jobVacanciesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(dashboardUserInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dashboardUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -263,28 +343,32 @@ public class DashboardExtras extends javax.swing.JPanel {
     
     private void showUserInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showUserInfoActionPerformed
         // TODO add your handling code here:
-        if (dashboardUserInfo1.isVisible()) {
-            dashboardUserInfo1.setVisible(false);
+        if (dashboardUserInfo.isVisible()) {
+            dashboardUserInfo.setVisible(false);
             showUserInfo.setText("Show User Information");
         } else {
-            dashboardUserInfo1.setVisible(true);
+            dashboardUserInfo.setVisible(true);
             showUserInfo.setText("Hide User Information");
         }
     }//GEN-LAST:event_showUserInfoActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel GuidesTitleBar;
     private javax.swing.JPanel announcementTitleBar;
-    private javax.swing.JPanel announcementsPanel;
+    private javax.swing.JPanel announcementTitleBar1;
+    private javax.swing.JPanel announcementsPanel1;
     private javax.swing.JLabel announcments;
-    private Components.DashboardUserInfo dashboardUserInfo1;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel announcments1;
+    private Components.DashboardUserInfo dashboardUserInfo;
+    private javax.swing.JLabel guideLabel;
+    private javax.swing.JPanel guides;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPanel linksTitleBar;
-    private javax.swing.JPanel links_etc;
+    private javax.swing.JPanel jobVacanciesPanel;
+    private javax.swing.JPanel linksTitleBar1;
+    private javax.swing.JPanel links_etc1;
     private javax.swing.JLabel reminder1_ph;
-    private javax.swing.JLabel reminder1_ph_2;
     private javax.swing.JLabel reminder1_us;
     private javax.swing.JLabel reminders;
     private javax.swing.JPanel remindersPanel;
