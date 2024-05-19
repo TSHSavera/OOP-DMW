@@ -6,9 +6,12 @@ package Layouts;
  */
 
 import Cards.DashboardHome;
+import Cards.MyExperience;
 import Components.*;
 import Utilities.ThemeColors;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import javax.swing.*;
 import net.miginfocom.swing.MigLayout;
 
@@ -40,19 +43,33 @@ public class DashboardLayout extends JFrame {
         JPanel cardContainer = new JPanel(new CardLayout());
         //Instantiate the panels to be included in the card
         DashboardHome CardDashboardHome = new DashboardHome();
+        MyExperience a = new MyExperience();
+        //DashboardExtras a = new DashboardExtras();
         
         //Add the cards
-        cardContainer.add(CardDashboardHome);
+        cardContainer.add(a);
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");
         
         
         
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize(); 
+               double width = screenSize.getWidth();
+                if (width < 1500) {
+                    setSize(new Dimension(1500, getHeight()));
+                    super.componentResized(e);
+                } 
+            }
 
+        });
 
         // Add main panel to the frame
         add(mainPanel);
+        pack();
         
     }
     
