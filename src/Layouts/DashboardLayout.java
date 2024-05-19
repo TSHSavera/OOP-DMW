@@ -40,7 +40,7 @@ public class DashboardLayout extends JFrame {
         JPanel cardContainer = new JPanel(new CardLayout());
         //Instantiate the panels to be included in the card
         DashboardHome CardDashboardHome = new DashboardHome();
-        MyProfile CardMyProfile = new MyProfile();
+        EditMyProfile CardMyProfile = new EditMyProfile();
         
         //Add the cards
         //cardContainer.add(CardDashboardHome);
