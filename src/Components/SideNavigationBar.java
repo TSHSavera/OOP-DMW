@@ -9,10 +9,14 @@ package Components;
  * @author Troy
  */
 
+import Cards.DashboardHome;
+import Cards.MyExperience;
 import Utilities.*;
 import Resources.*;
+import Layouts.DashboardLayout;
 
 import javax.swing.*;
+import java.awt.*;
 
 
 public class SideNavigationBar extends javax.swing.JPanel {
@@ -60,6 +64,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         DashboardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DashboardBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 DashboardBtnMouseEntered(evt);
             }
@@ -156,6 +163,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         ExperienceBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExperienceBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ExperienceBtnMouseEntered(evt);
             }
@@ -430,6 +440,24 @@ public class SideNavigationBar extends javax.swing.JPanel {
         LogoutBtn.setForeground(ThemeColors.ON_SURFACE);
     }//GEN-LAST:event_LogoutBtnFocusLost
 
+    private void DashboardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Dashboard Card
+        DashboardHome dl = new DashboardHome();
+        //Switch layout to DashboardLayout
+        switchLayout(DashboardLayout.cardContainer, "dashboard");
+
+    }//GEN-LAST:event_DashboardBtnMouseClicked
+
+    private void ExperienceBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExperienceBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Experience Card
+        MyExperience me = new MyExperience();
+        //Switch layout to ExperienceLayout
+        switchLayout(DashboardLayout.cardContainer, "experience");
+
+    }//GEN-LAST:event_ExperienceBtnMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DashboardBtn;
@@ -441,4 +469,10 @@ public class SideNavigationBar extends javax.swing.JPanel {
     private javax.swing.JButton ResumeBtn;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    //Function to switch layouts - card layout
+    public void switchLayout(JPanel panel, String layout){
+        CardLayout cardLayout = (CardLayout) panel.getLayout();
+        cardLayout.show(panel, layout);
+    }
 }
