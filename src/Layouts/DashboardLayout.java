@@ -5,7 +5,7 @@ package Layouts;
  * @author Troy
  */
 
-import Cards.DashboardHome;
+import Cards.*;
 import Components.*;
 import Utilities.ThemeColors;
 import java.awt.*;
@@ -40,9 +40,11 @@ public class DashboardLayout extends JFrame {
         JPanel cardContainer = new JPanel(new CardLayout());
         //Instantiate the panels to be included in the card
         DashboardHome CardDashboardHome = new DashboardHome();
+        MyProfile CardMyProfile = new MyProfile();
         
         //Add the cards
-        cardContainer.add(CardDashboardHome);
+        //cardContainer.add(CardDashboardHome);
+        cardContainer.add(CardMyProfile);
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");
