@@ -78,3 +78,4 @@ fabric.properties
 *.class
 *.properties
 *.class
+nbproject/private/private.xml

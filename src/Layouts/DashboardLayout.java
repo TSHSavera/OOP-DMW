@@ -17,6 +17,8 @@ import net.miginfocom.swing.MigLayout;
 
 
 public class DashboardLayout extends JFrame {
+    //Create card container
+    public static JPanel cardContainer = new JPanel(new CardLayout());
     public DashboardLayout() {
         init();
     }
@@ -39,15 +41,14 @@ public class DashboardLayout extends JFrame {
         SideNavigationBar sideNavigationBar = new SideNavigationBar();
         mainPanel.add(sideNavigationBar, "pushy, growy, dock west, width 250");
 
-        // Create card container
-        JPanel cardContainer = new JPanel(new CardLayout());
         //Instantiate the panels to be included in the card
-        DashboardHome CardDashboardHome = new DashboardHome();
-        MyExperience a = new MyExperience();
+        DashboardHome a = new DashboardHome();
+        MyExperience d = new MyExperience();
         //DashboardExtras a = new DashboardExtras();
         
         //Add the cards
-        cardContainer.add(a);
+        cardContainer.add(a, "dashboard");
+        cardContainer.add(d, "experience");
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");
@@ -73,7 +74,7 @@ public class DashboardLayout extends JFrame {
         
     }
     
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         EventQueue.invokeLater(() -> new DashboardLayout().setVisible(true));
     }
     
