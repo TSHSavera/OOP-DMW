@@ -459,6 +459,8 @@ public class SideNavigationBar extends javax.swing.JPanel {
         MyExperience me = new MyExperience();
         //Switch layout to ExperienceLayout
         switchLayout(DashboardLayout.cardContainer, "experience");
+        //Also change the bgcolor of the sidenav button that was clicked if the corresponding card is shown
+        checkOpenedTab();
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
 
@@ -486,5 +488,27 @@ public class SideNavigationBar extends javax.swing.JPanel {
     public void switchLayout(JPanel panel, String layout){
         CardLayout cardLayout = (CardLayout) panel.getLayout();
         cardLayout.show(panel, layout);
+    }
+
+    private void checkOpenedTab() {
+        if (DashboardLayout.cardContainer.getComponent(0).isVisible()){
+            DashboardBtn.setBackground(ThemeColors.PRIMARY);
+            DashboardBtn.setForeground(ThemeColors.ON_PRIMARY);
+        } else if (DashboardLayout.cardContainer.getComponent(1).isVisible()){
+            EducationBtn.setBackground(ThemeColors.PRIMARY);
+            EducationBtn.setForeground(ThemeColors.ON_PRIMARY);
+        } else if (DashboardLayout.cardContainer.getComponent(2).isVisible()){
+            ExperienceBtn.setBackground(ThemeColors.PRIMARY);
+            ExperienceBtn.setForeground(ThemeColors.ON_PRIMARY);
+        } else if (DashboardLayout.cardContainer.getComponent(3).isVisible()){
+            DocumentBtn.setBackground(ThemeColors.PRIMARY);
+            DocumentBtn.setForeground(ThemeColors.ON_PRIMARY);
+        } else if (DashboardLayout.cardContainer.getComponent(4).isVisible()){
+            ResumeBtn.setBackground(ThemeColors.PRIMARY);
+            ResumeBtn.setForeground(ThemeColors.ON_PRIMARY);
+        } else if (DashboardLayout.cardContainer.getComponent(5).isVisible()){
+            LogoutBtn.setBackground(ThemeColors.PRIMARY);
+            LogoutBtn.setForeground(ThemeColors.ON_PRIMARY);
+        }
     }
 }
