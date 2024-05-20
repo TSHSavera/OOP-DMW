@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class SQLHandler {
     private static final String dbUsername = "root";
-    private static final String dbPassword = "";
-    private static final String dbName = "gisakay";
+    private static final String dbPassword = "abc123";
+    private static final String dbName = "db_poea";
     private static final String dbURL = "jdbc:mysql://localhost:3306/" + dbName;
     private static ArrayList<Map> results = new ArrayList<>();
 
@@ -92,9 +92,9 @@ public class SQLHandler {
     //Test the SQLHandler class
     public static void main(String[] args) {
         SQLHandler sqlHandler = new SQLHandler();
-        sqlHandler.executeQuery("SELECT * FROM studentdata");
+        sqlHandler.executeQuery("SELECT * FROM user");
         //Print the results of the query
-        for (Map result : sqlHandler.getResults()) {
+        for (var result : sqlHandler.getResults()) {
             System.out.println(result);
         }
     }
