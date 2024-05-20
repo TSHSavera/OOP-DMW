@@ -10,6 +10,7 @@ package Components;
  */
 
 import Cards.DashboardHome;
+import Cards.MyEducation;
 import Cards.MyExperience;
 import Utilities.*;
 import Resources.*;
@@ -132,6 +133,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         EducationBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EducationBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 EducationBtnMouseEntered(evt);
             }
@@ -457,6 +461,14 @@ public class SideNavigationBar extends javax.swing.JPanel {
         switchLayout(DashboardLayout.cardContainer, "experience");
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
+
+    private void EducationBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EducationBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Education Card
+        MyEducation me = new MyEducation();
+        //Switch layout to EducationLayout
+        switchLayout(DashboardLayout.cardContainer, "education");
+    }//GEN-LAST:event_EducationBtnMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
