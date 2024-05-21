@@ -11,6 +11,7 @@ package Components;
 
 import Cards.DashboardHome;
 import Cards.MyExperience;
+import Cards.MyDocuments;
 import Utilities.*;
 import Resources.*;
 import Layouts.DashboardLayout;
@@ -197,6 +198,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         DocumentBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DocumentBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 DocumentBtnMouseEntered(evt);
             }
@@ -458,6 +462,13 @@ public class SideNavigationBar extends javax.swing.JPanel {
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
 
+    private void DocumentBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Experience Card
+        MyDocuments md = new MyDocuments();
+        //Switch layout to ExperienceLayout
+        switchLayout(DashboardLayout.cardContainer, "documents");
+    }//GEN-LAST:event_DocumentBtnMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DashboardBtn;

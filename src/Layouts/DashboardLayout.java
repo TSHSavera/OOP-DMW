@@ -7,6 +7,7 @@ package Layouts;
 
 import Cards.DashboardHome;
 import Cards.MyExperience;
+import Cards.MyDocuments;
 import Components.*;
 import Utilities.ThemeColors;
 import java.awt.*;
@@ -44,11 +45,13 @@ public class DashboardLayout extends JFrame {
         //Instantiate the panels to be included in the card
         DashboardHome a = new DashboardHome();
         MyExperience d = new MyExperience();
+        MyDocuments e = new MyDocuments();
         //DashboardExtras a = new DashboardExtras();
         
         //Add the cards
         cardContainer.add(a, "dashboard");
         cardContainer.add(d, "experience");
+        cardContainer.add(e, "documents");
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");
