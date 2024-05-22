@@ -38,7 +38,7 @@ public class MyDocuments extends javax.swing.JPanel {
         setBackground(ThemeColors.BACKGROUND);
         java.awt.GridBagLayout layout = new java.awt.GridBagLayout();
         layout.columnWidths = new int[] {0};
-        layout.rowHeights = new int[] {0};
+        layout.rowHeights = new int[] {0, 0, 0};
         setLayout(layout);
 
         jPanel1.setBackground(ThemeColors.SURFACE_VARIANT);
@@ -60,6 +60,7 @@ public class MyDocuments extends javax.swing.JPanel {
         jToggleButton1.setBackground(ThemeColors.PRIMARY);
         jToggleButton1.setForeground(ThemeColors.ON_PRIMARY);
         jToggleButton1.setText("Show Documents");
+        jToggleButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -72,6 +73,7 @@ public class MyDocuments extends javax.swing.JPanel {
         jButton1.setBackground(ThemeColors.PRIMARY);
         jButton1.setForeground(ThemeColors.ON_PRIMARY);
         jButton1.setText("Add Document");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -92,9 +94,7 @@ public class MyDocuments extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 24;
         gridBagConstraints.ipady = 24;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);
+        gridBagConstraints.insets = new java.awt.Insets(12, 12, 0, 12);
         add(jPanel1, gridBagConstraints);
 
         jPanel2.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
@@ -112,14 +112,14 @@ public class MyDocuments extends javax.swing.JPanel {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 24;
         gridBagConstraints.ipady = 24;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);
+        gridBagConstraints.insets = new java.awt.Insets(0, 12, 12, 12);
         add(jPanel2, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
