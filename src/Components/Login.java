@@ -62,6 +62,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Email");
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setText("Mjcg@gmail.com");
         jTextField2.setOpaque(true);
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -79,6 +80,7 @@ public class Login extends javax.swing.JFrame {
 
         jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordField1.setText("maryjane123");
 
         jButton1.setBackground(ThemeColors.PRIMARY);
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -287,4 +289,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    //Force login
+
 }

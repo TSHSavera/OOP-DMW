@@ -10,10 +10,7 @@ package Components;
  */
 
 import API.Auth;
-import Cards.DashboardHome;
-import Cards.MyDocuments;
-import Cards.MyEducation;
-import Cards.MyExperience;
+import Cards.*;
 import Layouts.LoginSignUp;
 import Utilities.*;
 import Resources.*;
@@ -105,6 +102,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         ProfileBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProfileBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ProfileBtnMouseEntered(evt);
             }
@@ -460,8 +460,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
 
     private void DashboardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBtnMouseClicked
         // TODO add your handling code here:
-        //Instantiate Dashboard Card
-        DashboardHome dl = new DashboardHome();
         //Switch layout to DashboardLayout
         switchLayout(DashboardLayout.cardContainer, "dashboard");
 
@@ -469,8 +467,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
 
     private void ExperienceBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExperienceBtnMouseClicked
         // TODO add your handling code here:
-        //Instantiate Experience Card
-        MyExperience me = new MyExperience();
         //Switch layout to ExperienceLayout
         switchLayout(DashboardLayout.cardContainer, "experience");
 
@@ -478,19 +474,19 @@ public class SideNavigationBar extends javax.swing.JPanel {
 
     private void EducationBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EducationBtnMouseClicked
         // TODO add your handling code here:
-        //Instantiate Education Card
-        MyEducation me = new MyEducation();
         //Switch layout to EducationLayout
         switchLayout(DashboardLayout.cardContainer, "education");
     }//GEN-LAST:event_EducationBtnMouseClicked
 
     private void DocumentBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseClicked
         // TODO add your handling code here:
-        //Instantiate Document Card
-        MyDocuments md = new MyDocuments();
         //Switch layout to DocumentLayout
         switchLayout(DashboardLayout.cardContainer, "documents");
     }//GEN-LAST:event_DocumentBtnMouseClicked
+    
+    private void ResumeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResumeBtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ResumeBtnMouseClicked
 
     private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
         // TODO add your handling code here:
@@ -507,6 +503,12 @@ public class SideNavigationBar extends javax.swing.JPanel {
     private void EducationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EducationBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EducationBtnActionPerformed
+
+    private void ProfileBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfileBtnMouseClicked
+        // TODO add your handling code here:
+        //Switch layout to ProfileLayout
+        switchLayout(DashboardLayout.cardContainer, "profile");
+    }//GEN-LAST:event_ProfileBtnMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

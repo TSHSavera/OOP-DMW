@@ -5,10 +5,7 @@ package Layouts;
  * @author Troy
  */
 
-import Cards.DashboardHome;
-import Cards.MyEducation;
-import Cards.MyExperience;
-import Cards.MyDocuments;
+import Cards.*;
 import Components.*;
 import Utilities.ThemeColors;
 import java.awt.*;
@@ -44,6 +41,7 @@ public class DashboardLayout extends JFrame {
 
         //Instantiate the panels to be included in the card
         DashboardHome a = new DashboardHome();
+        MyProfile b = new MyProfile();
         MyEducation c = new MyEducation();
         MyExperience d = new MyExperience();
         MyDocuments e = new MyDocuments();
@@ -53,6 +51,7 @@ public class DashboardLayout extends JFrame {
         
         //Add the cards
         cardContainer.add(a, "dashboard");
+        cardContainer.add(b, "profile");
         cardContainer.add(c, "education");
         cardContainer.add(d, "experience");
         cardContainer.add(e, "documents");
