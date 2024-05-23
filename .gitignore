@@ -81,3 +81,6 @@ fabric.properties
 nbproject/private/private.xml
 /build
 /nbproject/private
+
+**/.idea/workspace.xml
+**/.idea/tasks.xml
