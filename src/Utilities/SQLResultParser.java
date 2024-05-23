@@ -37,29 +37,29 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class SQLResultParser {
-    private Map<String, String> results = new HashMap<>();
+    //Store the results of the query
+    private ArrayList<Map> results = new ArrayList<>();
+    private Map<String, String> result = new HashMap<>();
 
-    //Every class that extends this class must implement this method
     public abstract ArrayList<Map> sqlQuery();
-
     //On instantiation, parse the results of the query
     public SQLResultParser() {
-        sqlQuery();
+        results = sqlQuery();
     }
 
-    public SQLResultParser parseResults(ArrayList<Map> QueryResults) {
+    public SQLResultParser parseResults() {
         //Parse the results of the query - make it accessible by doing parseResults().get("Key")
-        results = QueryResults.get(0);
+        result = results.get(0);
         return this;
     }
 
-    public SQLResultParser parseResults(ArrayList<Map> QueryResults, int index) {
+    public SQLResultParser parseResults(int index) {
         //Parse the results of the query - make it accessible by doing parseResults().get("Key")
-        results = QueryResults.get(index);
+        result = results.get(index);
         return this;
     }
 
     public Object getValueByKey(String key) {
-        return results.get(key);
+        return this.result.get(key);
     }
 }

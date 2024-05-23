@@ -9,8 +9,10 @@ package Components;
  * @author Troy
  */
 
+import API.Auth;
 import Cards.DashboardHome;
 import Cards.MyExperience;
+import Layouts.LoginSignUp;
 import Utilities.*;
 import Resources.*;
 import Layouts.DashboardLayout;
@@ -259,6 +261,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         LogoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 LogoutBtnMouseEntered(evt);
             }
@@ -457,6 +462,18 @@ public class SideNavigationBar extends javax.swing.JPanel {
         switchLayout(DashboardLayout.cardContainer, "experience");
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
+
+    private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
+        // TODO add your handling code here:
+        //Close the current frame
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.dispose();
+        //Logout from Auth
+        API.Auth.logout();
+        //Call login layout
+        LoginSignUp.main(new String[0]);
+
+    }//GEN-LAST:event_LogoutBtnMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

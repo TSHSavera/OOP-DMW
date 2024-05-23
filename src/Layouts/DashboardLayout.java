@@ -45,6 +45,8 @@ public class DashboardLayout extends JFrame {
         DashboardHome a = new DashboardHome();
         MyExperience d = new MyExperience();
         //DashboardExtras a = new DashboardExtras();
+
+
         
         //Add the cards
         cardContainer.add(a, "dashboard");
