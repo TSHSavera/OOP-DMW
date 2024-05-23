@@ -692,7 +692,7 @@ public class SignUp extends javax.swing.JFrame {
 
         //Once the data is obtained, disable the fields to prevent multiple submissions
         DisableSignUp();
-        
+
         //Check if the user has entered all the required fields
         if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || gender.isEmpty() || email.isEmpty() || birthday.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill out all the fields!", "Error", JOptionPane.ERROR_MESSAGE);

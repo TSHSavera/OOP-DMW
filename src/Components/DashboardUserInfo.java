@@ -203,7 +203,7 @@ public class DashboardUserInfo extends javax.swing.JPanel {
 
     //Set the user name
     public void setUserName() {
-        userName.setText(Auth.userData.get("LastName") + ", " + Auth.userData.get("FirstName") + ", " + Auth.userData.get("MiddleName"));
+        userName.setText(Auth.userData.get("LastName") + ", " + Auth.userData.get("FirstName") + ", " + Auth.userData.get("MiddleName") + " " + Auth.userData.get("Suffix"));
         //Set the email
         accountNumber.setText(Auth.userData.get("EmailAddress").toString());
     }
