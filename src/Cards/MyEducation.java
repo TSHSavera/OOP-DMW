@@ -9,10 +9,7 @@ package Cards;
  * @author napbo
  */
 
-import Components.Certificates_FORM;
-import Components.Education_FORM;
-import Components.Language_FORM;
-import Components.Trainings_FORM;
+import Components.*;
 import Utilities.*;
 
 import javax.swing.*;

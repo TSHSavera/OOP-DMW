@@ -11,6 +11,7 @@ package Components;
 
 import API.Auth;
 import Cards.DashboardHome;
+import Cards.MyEducation;
 import Cards.MyExperience;
 import Layouts.LoginSignUp;
 import Utilities.*;
@@ -134,11 +135,19 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         EducationBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EducationBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 EducationBtnMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 EducationBtnMouseExited(evt);
+            }
+        });
+        EducationBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EducationBtnActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -463,6 +472,14 @@ public class SideNavigationBar extends javax.swing.JPanel {
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
 
+    private void EducationBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EducationBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Education Card
+        MyEducation me = new MyEducation();
+        //Switch layout to EducationLayout
+        switchLayout(DashboardLayout.cardContainer, "education");
+    }//GEN-LAST:event_EducationBtnMouseClicked
+
     private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
         // TODO add your handling code here:
         //Close the current frame
@@ -474,6 +491,10 @@ public class SideNavigationBar extends javax.swing.JPanel {
         LoginSignUp.main(new String[0]);
 
     }//GEN-LAST:event_LogoutBtnMouseClicked
+
+    private void EducationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EducationBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EducationBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
