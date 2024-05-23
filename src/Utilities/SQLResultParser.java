@@ -59,6 +59,10 @@ public abstract class SQLResultParser {
         return this;
     }
 
+    public int getResultsSize() {
+        return results.size();
+    }
+
     public Object getValueByKey(String key) {
         return this.result.get(key);
     }

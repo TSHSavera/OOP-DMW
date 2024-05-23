@@ -4,7 +4,14 @@
  */
 package Cards;
 
+import API.SQLHandler;
+import Utilities.SQLResultParser;
 import Utilities.ThemeColors;
+
+import java.awt.event.ItemEvent;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -45,9 +52,9 @@ public class MyProfile extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox5 = new javax.swing.JComboBox<>();
         jComboBox9 = new javax.swing.JComboBox<>();
+        jTextField13 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -105,14 +112,14 @@ public class MyProfile extends javax.swing.JPanel {
         setBackground(ThemeColors.BACKGROUND);
         setForeground(ThemeColors.ON_BACKGROUND);
         java.awt.GridBagLayout layout = new java.awt.GridBagLayout();
-        layout.columnWidths = new int[] {0, 16, 0};
-        layout.rowHeights = new int[] {0, 16, 0};
+        layout.columnWidths = new int[] {0};
+        layout.rowHeights = new int[] {0};
         setLayout(layout);
 
         jPanel1.setBackground(ThemeColors.BACKGROUND);
         jPanel1.setForeground(ThemeColors.ON_BACKGROUND);
         java.awt.GridBagLayout jPanel1Layout = new java.awt.GridBagLayout();
-        jPanel1Layout.columnWidths = new int[] {0};
+        jPanel1Layout.columnWidths = new int[] {0, 5, 0};
         jPanel1Layout.rowHeights = new int[] {0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0};
         jPanel1.setLayout(jPanel1Layout);
 
@@ -128,6 +135,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel4, gridBagConstraints);
 
         jPanel5.setBackground(ThemeColors.BACKGROUND);
@@ -234,6 +243,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel5, gridBagConstraints);
 
         jPanel3.setBackground(ThemeColors.BACKGROUND);
@@ -271,31 +282,31 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         jPanel3.add(jLabel5, gridBagConstraints);
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel3.add(jComboBox4, gridBagConstraints);
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel3.add(jComboBox5, gridBagConstraints);
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Divorced", "Separated", "Widowed" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel3.add(jComboBox9, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel3.add(jTextField13, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel3, gridBagConstraints);
 
         jPanel9.setOpaque(false);
@@ -310,6 +321,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel9, gridBagConstraints);
 
         jPanel10.setBackground(ThemeColors.BACKGROUND);
@@ -389,6 +402,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel10, gridBagConstraints);
 
         jPanel7.setBackground(ThemeColors.BACKGROUND);
@@ -428,6 +443,11 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel7.add(jComboBox2, gridBagConstraints);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox3ItemStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -439,6 +459,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 18;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel7, gridBagConstraints);
 
         jPanel12.setOpaque(false);
@@ -453,6 +475,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel12, gridBagConstraints);
 
         jPanel17.setOpaque(false);
@@ -467,6 +491,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 24;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel17, gridBagConstraints);
 
         jPanel18.setOpaque(false);
@@ -481,6 +507,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel18, gridBagConstraints);
 
         jPanel2.setBackground(ThemeColors.BACKGROUND);
@@ -556,6 +584,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel2, gridBagConstraints);
 
         jPanel8.setOpaque(false);
@@ -565,7 +595,7 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel8.setLayout(jPanel8Layout);
 
         jLabel15.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel15.setText("Height (Taas)");
+        jLabel15.setText("Height (Taas) [CM]");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -585,7 +615,7 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel8.add(jTextField14, gridBagConstraints);
 
         jLabel16.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel16.setText("Weight (Timbang)");
+        jLabel16.setText("Weight (Timbang) [KG]");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
@@ -628,6 +658,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel8, gridBagConstraints);
 
         jPanel14.setOpaque(false);
@@ -648,6 +680,11 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel14.add(jLabel29, gridBagConstraints);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -658,6 +695,11 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel14.add(jComboBox1, gridBagConstraints);
 
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox10.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox10ItemStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -682,6 +724,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel14, gridBagConstraints);
 
         jPanel11.setOpaque(false);
@@ -772,6 +816,8 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel11, gridBagConstraints);
 
         jPanel6.setOpaque(false);
@@ -844,18 +890,18 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 26;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel6, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 32;
-        gridBagConstraints.ipady = 32;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_START;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(32, 32, 32, 32);
         add(jPanel1, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -899,13 +945,114 @@ public class MyProfile extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
 
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+        // TODO add your handling code here:
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            //Get the selected province
+            String selectedProvince = jComboBox1.getSelectedItem().toString();
+            //Get the list of cities/municipalities in the selected province
+            List<String> cities = new ArrayList<>();
+            //Query the database for the list of cities/municipalities
+            String query = "SELECT MunicipalityName FROM municipalities WHERE ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + selectedProvince + "') ORDER BY MunicipalityName ASC";
+            //Call SQL Handler to execute the query
+            SQLHandler a = new SQLHandler();
+            a.createQuery(query).executeQuery();
+
+            //For each row in the result set, add the city/municipality name to the list
+            SQLResultParser parser = new SQLResultParser() {
+                @Override
+                public ArrayList<Map> sqlQuery() {
+                    return a.getResults();
+                }
+            };
+            //For each row in the result set, add the city/municipality name to the list
+            for (int i = 0; i < parser.getResultsSize(); i++) {
+                cities.add(parser.parseResults(i).getValueByKey("MunicipalityName").toString());
+            }
+
+            //Add the cities/municipalities to the combobox
+            jComboBox10.removeAllItems();
+            for (String city : cities) {
+                jComboBox10.addItem(city);
+            };
+        }
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
+
+    private void jComboBox3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox3ItemStateChanged
+        // TODO add your handling code here:
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            //Get the selected province
+            String selectedProvince = jComboBox3.getSelectedItem().toString();
+            //Get the list of cities/municipalities in the selected province
+            List<String> cities = new ArrayList<>();
+            //Query the database for the list of cities/municipalities
+            String query = "SELECT MunicipalityName FROM municipalities WHERE ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + selectedProvince + "') ORDER BY MunicipalityName ASC";
+            //Call SQL Handler to execute the query
+            SQLHandler a = new SQLHandler();
+            a.createQuery(query).executeQuery();
+
+            //For each row in the result set, add the city/municipality name to the list
+            SQLResultParser parser = new SQLResultParser() {
+                @Override
+                public ArrayList<Map> sqlQuery() {
+                    return a.getResults();
+                }
+            };
+            //For each row in the result set, add the city/municipality name to the list
+            for (int i = 0; i < parser.getResultsSize(); i++) {
+                cities.add(parser.parseResults(i).getValueByKey("MunicipalityName").toString());
+            }
+
+            //Add the cities/municipalities to the combobox
+            jComboBox2.removeAllItems();
+            for (String city : cities) {
+                jComboBox2.addItem(city);
+            };
+        }
+    }//GEN-LAST:event_jComboBox3ItemStateChanged
+
+    private void jComboBox10ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox10ItemStateChanged
+        // TODO add your handling code here:
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            System.out.println("Triggered");
+            //Get the selected city/municipality
+            var selectedCityElement = jComboBox10.getSelectedItem();
+            assert selectedCityElement != null;
+            String selectedCity = selectedCityElement.toString();
+            //Get the list of barangays in the selected city/municipality
+            List<String> barangays = new ArrayList<>();
+            //Query the database for the list of barangays
+            String query = "SELECT BarangayName FROM barangay WHERE MunicipalityID = (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '" + selectedCity + "' AND ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + jComboBox1.getSelectedItem().toString() + "')) ORDER BY BarangayName ASC";
+            //Call SQL Handler to execute the query
+            SQLHandler a = new SQLHandler();
+            a.createQuery(query).executeQuery();
+
+            //For each row in the result set, add the barangay name to the list
+            SQLResultParser parser = new SQLResultParser() {
+                @Override
+                public ArrayList<Map> sqlQuery() {
+                    return a.getResults();
+                }
+            };
+            //For each row in the result set, add the barangay name to the list
+            for (int i = 0; i < parser.getResultsSize(); i++) {
+                barangays.add(parser.parseResults(i).getValueByKey("BarangayName").toString());
+            }
+
+            //Add the barangays to the combobox
+            jComboBox6.removeAllItems();
+            for (String barangay : barangays) {
+                jComboBox6.addItem(barangay);
+            };
+        }
+    }//GEN-LAST:event_jComboBox10ItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox9;
@@ -959,6 +1106,7 @@ public class MyProfile extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
@@ -974,4 +1122,49 @@ public class MyProfile extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    //Generate the list of provinces in the combobox
+    private void generateProvinces() {
+        //Clear all comboboxes
+        jComboBox1.removeAllItems();
+        jComboBox2.removeAllItems();
+        jComboBox3.removeAllItems();
+        jComboBox6.removeAllItems();
+        jComboBox10.removeAllItems();
+
+        //Get the list of provinces from the database
+        List<String> provinces = new ArrayList<>();
+        //Query the database for the list of provinces
+        String query = "SELECT ProvinceName FROM provinces ORDER BY ProvinceName ASC";
+        //Call SQL Handler to execute the query
+        SQLHandler a = new SQLHandler();
+        a.createQuery(query).executeQuery();
+
+        //For each row in the result set, add the province name to the list
+        SQLResultParser parser = new SQLResultParser() {
+            @Override
+            public ArrayList<Map> sqlQuery() {
+                return a.getResults();
+            }
+        };
+        //For each row in the result set, add the province name to the list
+        for (int i = 0; i < parser.getResultsSize(); i++) {
+            provinces.add(parser.parseResults(i).getValueByKey("ProvinceName").toString());
+        }
+
+        //Add the provinces to the combobox
+        for (String province : provinces) {
+            jComboBox1.addItem(province);
+            jComboBox3.addItem(province);
+        }
+    }
+
+
+    //Load when the panel is shown
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        generateProvinces();
+    }
+
 }

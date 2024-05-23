@@ -101,11 +101,11 @@ public class SQLHandler {
                         System.out.println("Query executed successfully!");
                     }
                 } catch (SQLException e) {
-                    throw new IllegalStateException("Cannot execute the query!", e);
+                    throw new IllegalStateException("Cannot execute the query!" + query, e);
                 }
             }
         } catch (SQLException e) {
-            throw new IllegalStateException("Cannot execute the query!", e);
+            throw new IllegalStateException("Cannot execute the query: " + query, e);
         }
     }
 

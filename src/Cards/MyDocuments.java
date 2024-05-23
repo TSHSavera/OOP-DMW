@@ -4,7 +4,11 @@
  */
 package Cards;
 
+import Components.AddDocument;
+import Components.AddExperienceWindow;
 import Utilities.ThemeColors;
+
+import javax.swing.*;
 
 /**
  *
@@ -74,6 +78,11 @@ public class MyDocuments extends javax.swing.JPanel {
         jButton1.setForeground(ThemeColors.ON_PRIMARY);
         jButton1.setText("Add Document");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -126,6 +135,17 @@ public class MyDocuments extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        //Open the add new document dialog
+        AddDocument addDocument = new AddDocument();
+        addDocument.setVisible(true);
+        addDocument.pack();
+        addDocument.setLocationRelativeTo(null);
+        addDocument.setAlwaysOnTop(true);
+        addDocument.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
