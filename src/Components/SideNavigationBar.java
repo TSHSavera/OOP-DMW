@@ -11,6 +11,7 @@ package Components;
 
 import API.Auth;
 import Cards.DashboardHome;
+import Cards.MyDocuments;
 import Cards.MyEducation;
 import Cards.MyExperience;
 import Layouts.LoginSignUp;
@@ -208,6 +209,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         DocumentBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DocumentBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 DocumentBtnMouseEntered(evt);
             }
@@ -479,6 +483,14 @@ public class SideNavigationBar extends javax.swing.JPanel {
         //Switch layout to EducationLayout
         switchLayout(DashboardLayout.cardContainer, "education");
     }//GEN-LAST:event_EducationBtnMouseClicked
+
+    private void DocumentBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseClicked
+        // TODO add your handling code here:
+        //Instantiate Document Card
+        MyDocuments md = new MyDocuments();
+        //Switch layout to DocumentLayout
+        switchLayout(DashboardLayout.cardContainer, "documents");
+    }//GEN-LAST:event_DocumentBtnMouseClicked
 
     private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
         // TODO add your handling code here:
