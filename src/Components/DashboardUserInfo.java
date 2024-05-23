@@ -5,6 +5,7 @@
 package Components;
 
 import Utilities.ThemeColors;
+import API.Auth;
 /**
  *
  * @author norma
@@ -199,4 +200,18 @@ public class DashboardUserInfo extends javax.swing.JPanel {
     private javax.swing.JPanel userDetails;
     private javax.swing.JLabel userName;
     // End of variables declaration//GEN-END:variables
+
+    //Set the user name
+    public void setUserName() {
+        userName.setText(Auth.userData.get("LastName") + ", " + Auth.userData.get("FirstName") + ", " + Auth.userData.get("MiddleName"));
+        //Set the email
+        accountNumber.setText(Auth.userData.get("EmailAddress").toString());
+    }
+
+    //Add event listener
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        setUserName();
+    }
 }

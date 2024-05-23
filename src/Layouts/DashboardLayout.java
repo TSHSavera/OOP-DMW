@@ -6,6 +6,7 @@ package Layouts;
  */
 
 import Cards.DashboardHome;
+import Cards.MyEducation;
 import Cards.MyExperience;
 import Cards.MyDocuments;
 import Components.*;
@@ -27,7 +28,6 @@ public class DashboardLayout extends JFrame {
     private void init() {
         // Initialize components here
         setTitle("(DMW) POEA Dashboard");
-        setSize(1000, 1000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Create main panel
@@ -44,12 +44,16 @@ public class DashboardLayout extends JFrame {
 
         //Instantiate the panels to be included in the card
         DashboardHome a = new DashboardHome();
+        MyEducation c = new MyEducation();
         MyExperience d = new MyExperience();
         MyDocuments e = new MyDocuments();
         //DashboardExtras a = new DashboardExtras();
+
+
         
         //Add the cards
         cardContainer.add(a, "dashboard");
+        cardContainer.add(c, "education");
         cardContainer.add(d, "experience");
         cardContainer.add(e, "documents");
         
