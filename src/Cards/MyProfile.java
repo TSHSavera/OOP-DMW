@@ -10,12 +10,12 @@ import Utilities.ThemeColors;
  *
  * @author roehl
  */
-public class EditMyProfile extends javax.swing.JPanel {
+public class MyProfile extends javax.swing.JPanel {
 
     /**
      * Creates new form MyProfile
      */
-    public EditMyProfile() {
+    public MyProfile() {
         initComponents();
     }
 
