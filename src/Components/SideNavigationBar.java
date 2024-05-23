@@ -9,9 +9,10 @@ package Components;
  * @author Troy
  */
 
+import API.Auth;
 import Cards.DashboardHome;
-import Cards.MyEducation;
 import Cards.MyExperience;
+import Layouts.LoginSignUp;
 import Utilities.*;
 import Resources.*;
 import Layouts.DashboardLayout;
@@ -133,9 +134,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         EducationBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EducationBtnMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 EducationBtnMouseEntered(evt);
             }
@@ -263,6 +261,9 @@ public class SideNavigationBar extends javax.swing.JPanel {
             }
         });
         LogoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutBtnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 LogoutBtnMouseEntered(evt);
             }
@@ -459,18 +460,20 @@ public class SideNavigationBar extends javax.swing.JPanel {
         MyExperience me = new MyExperience();
         //Switch layout to ExperienceLayout
         switchLayout(DashboardLayout.cardContainer, "experience");
-        //Also change the bgcolor of the sidenav button that was clicked if the corresponding card is shown
-        checkOpenedTab();
 
     }//GEN-LAST:event_ExperienceBtnMouseClicked
 
-    private void EducationBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EducationBtnMouseClicked
+    private void LogoutBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseClicked
         // TODO add your handling code here:
-        //Instantiate Education Card
-        MyEducation me = new MyEducation();
-        //Switch layout to EducationLayout
-        switchLayout(DashboardLayout.cardContainer, "education");
-    }//GEN-LAST:event_EducationBtnMouseClicked
+        //Close the current frame
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.dispose();
+        //Logout from Auth
+        API.Auth.logout();
+        //Call login layout
+        LoginSignUp.main(new String[0]);
+
+    }//GEN-LAST:event_LogoutBtnMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -488,27 +491,5 @@ public class SideNavigationBar extends javax.swing.JPanel {
     public void switchLayout(JPanel panel, String layout){
         CardLayout cardLayout = (CardLayout) panel.getLayout();
         cardLayout.show(panel, layout);
-    }
-
-    private void checkOpenedTab() {
-        if (DashboardLayout.cardContainer.getComponent(0).isVisible()){
-            DashboardBtn.setBackground(ThemeColors.PRIMARY);
-            DashboardBtn.setForeground(ThemeColors.ON_PRIMARY);
-        } else if (DashboardLayout.cardContainer.getComponent(1).isVisible()){
-            EducationBtn.setBackground(ThemeColors.PRIMARY);
-            EducationBtn.setForeground(ThemeColors.ON_PRIMARY);
-        } else if (DashboardLayout.cardContainer.getComponent(2).isVisible()){
-            ExperienceBtn.setBackground(ThemeColors.PRIMARY);
-            ExperienceBtn.setForeground(ThemeColors.ON_PRIMARY);
-        } else if (DashboardLayout.cardContainer.getComponent(3).isVisible()){
-            DocumentBtn.setBackground(ThemeColors.PRIMARY);
-            DocumentBtn.setForeground(ThemeColors.ON_PRIMARY);
-        } else if (DashboardLayout.cardContainer.getComponent(4).isVisible()){
-            ResumeBtn.setBackground(ThemeColors.PRIMARY);
-            ResumeBtn.setForeground(ThemeColors.ON_PRIMARY);
-        } else if (DashboardLayout.cardContainer.getComponent(5).isVisible()){
-            LogoutBtn.setBackground(ThemeColors.PRIMARY);
-            LogoutBtn.setForeground(ThemeColors.ON_PRIMARY);
-        }
     }
 }

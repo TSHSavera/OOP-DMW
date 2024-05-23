@@ -77,6 +77,11 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 *.class
 *.properties
-*.class
 nbproject/private/private.xml
+/build
+/nbproject/private
+
+**/.idea/workspace.xml
+**/.idea/tasks.xml
 .idea/discord.xml
+.idea/out
