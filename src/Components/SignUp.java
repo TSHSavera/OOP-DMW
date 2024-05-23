@@ -692,11 +692,12 @@ public class SignUp extends javax.swing.JFrame {
 
         //Once the data is obtained, disable the fields to prevent multiple submissions
         DisableSignUp();
-
-
+        
         //Check if the user has entered all the required fields
-        if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || suffix.isEmpty() || gender.isEmpty() || email.isEmpty() || birthday.isEmpty()) {
+        if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || gender.isEmpty() || email.isEmpty() || birthday.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill out all the fields!", "Error", JOptionPane.ERROR_MESSAGE);
+            //Enable the fields again
+            EnableSignUp();
         } else {
             //Check if the inputs are valid - one by one so that the user can see which field is invalid - then display an error message - then return
             if (!Validator.isAlpha(firstName)) {
@@ -705,11 +706,13 @@ public class SignUp extends javax.swing.JFrame {
                 EnableSignUp();
             } else if (!Validator.isAlpha(middleName)) {
                 JOptionPane.showMessageDialog(null, "Middle name is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
+                //Enable the fields again
+                EnableSignUp();
             } else if (!Validator.isAlpha(lastName)) {
                 JOptionPane.showMessageDialog(null, "Last name is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
                 //Enable the fields again
                 EnableSignUp();
-            } else if (!Validator.isAlpha(suffix)) {
+            } else if (!Validator.isAlphaAllowNull(suffix)) {
                 JOptionPane.showMessageDialog(null, "Suffix is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
                 //Enable the fields again
                 EnableSignUp();

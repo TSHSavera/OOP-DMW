@@ -43,6 +43,10 @@ public class Validator {
         return alpha.matches("^[a-zA-Z]*$");
     }
 
+    public static boolean isAlphaAllowNull(String alpha) {
+        return alpha.matches("^[a-zA-Z]*$") || alpha.equals("");
+    }
+
     public static boolean isAlphaSpace(String alphaSpace) {
         return alphaSpace.matches("^[a-zA-Z\\s]*$");
     }
