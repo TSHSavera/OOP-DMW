@@ -80,3 +80,4 @@ fabric.properties
 *.class
 nbproject/private/private.xml
 /build
+/nbproject/private
