@@ -1177,7 +1177,7 @@ public class MyProfile extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Invalid Weight", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        if (!Validator.isAlphaNumeric(religion)) {
+        if (!Validator.isAlphaNumericSpace(religion)) {
             JOptionPane.showMessageDialog(null, "Invalid Religion", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
