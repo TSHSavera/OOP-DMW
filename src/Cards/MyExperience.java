@@ -5,8 +5,8 @@
 package Cards;
 
 import Components.AddExperienceWindow;
-import Components.AddPreferenceWindow;
 import Components.TableComponents.ExperienceTable;
+import Components.TableComponents.TrainingTable;
 import Utilities.*;
 import javax.swing.JFrame;
 import javax.swing.JTable;
@@ -37,57 +37,12 @@ public class MyExperience extends javax.swing.JPanel {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        workPreferenceTitleBar = new javax.swing.JPanel();
-        workPreferenceLabel = new javax.swing.JLabel();
-        addPreferenceButton = new javax.swing.JButton();
         workExperienceTitleBar = new javax.swing.JPanel();
         workExperienceLabel = new javax.swing.JLabel();
         addExperienceButton = new javax.swing.JButton();
         experiencePanel1 = new Components.TableComponents.ExperienceTable();
-        preferencePanel1 = new Components.TableComponents.PreferenceTable();
 
         setBackground(ThemeColors.BACKGROUND);
-
-        workPreferenceTitleBar.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
-        workPreferenceTitleBar.setForeground(ThemeColors.ON_SURFACE);
-        workPreferenceTitleBar.setPreferredSize(new java.awt.Dimension(690, 58));
-
-        workPreferenceLabel.setBackground(ThemeColors.ON_PRIMARY_CONTAINER);
-        workPreferenceLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        workPreferenceLabel.setForeground(ThemeColors.ON_SURFACE);
-        workPreferenceLabel.setText("Work Preference");
-
-        addPreferenceButton.setBackground(ThemeColors.PRIMARY);
-        addPreferenceButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        addPreferenceButton.setForeground(ThemeColors.ON_PRIMARY);
-        addPreferenceButton.setText("Add Preference");
-        addPreferenceButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addPreferenceButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addPreferenceButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout workPreferenceTitleBarLayout = new javax.swing.GroupLayout(workPreferenceTitleBar);
-        workPreferenceTitleBar.setLayout(workPreferenceTitleBarLayout);
-        workPreferenceTitleBarLayout.setHorizontalGroup(
-            workPreferenceTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(workPreferenceTitleBarLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(workPreferenceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 275, Short.MAX_VALUE)
-                .addComponent(addPreferenceButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        workPreferenceTitleBarLayout.setVerticalGroup(
-            workPreferenceTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(workPreferenceTitleBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(workPreferenceTitleBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(workPreferenceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                    .addComponent(addPreferenceButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
 
         workExperienceTitleBar.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
         workExperienceTitleBar.setForeground(ThemeColors.ON_SURFACE);
@@ -132,8 +87,6 @@ public class MyExperience extends javax.swing.JPanel {
 
         experiencePanel1.setBackground(ThemeColors.BACKGROUND);
 
-        preferencePanel1.setBackground(ThemeColors.BACKGROUND);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,40 +94,18 @@ public class MyExperience extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(workExperienceTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(experiencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(preferencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(workPreferenceTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, 693, Short.MAX_VALUE))))
+                    .addComponent(workExperienceTitleBar, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
+                    .addComponent(experiencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(workExperienceTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(workPreferenceTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(workExperienceTitleBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(experiencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(preferencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(experiencePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void addPreferenceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPreferenceButtonActionPerformed
-        // Open AddPreferenceWindow
-        AddPreferenceWindow addPref = new AddPreferenceWindow();
-        addPref.setVisible(true);
-        addPref.pack();
-        addPref.setLocationRelativeTo(null);
-        addPref.setAlwaysOnTop(true);
-        addPref.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_addPreferenceButtonActionPerformed
 
     private void addExperienceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addExperienceButtonActionPerformed
         // Open AddExperienceWindow
@@ -190,14 +121,18 @@ public class MyExperience extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addExperienceButton;
-    private javax.swing.JButton addPreferenceButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private Components.TableComponents.ExperienceTable experiencePanel1;
-    private Components.TableComponents.PreferenceTable preferencePanel1;
     private javax.swing.JLabel workExperienceLabel;
     private javax.swing.JPanel workExperienceTitleBar;
-    private javax.swing.JLabel workPreferenceLabel;
-    private javax.swing.JPanel workPreferenceTitleBar;
     // End of variables declaration//GEN-END:variables
+
+    // At element load, populate the tables with the data from the database
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        //Populate the tables with the data from the database
+        ExperienceTable.updateTable();
+    }
 }

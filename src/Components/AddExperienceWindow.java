@@ -3,7 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Components;
+import API.Auth;
+import API.SQLHandler;
+import Components.TableComponents.ExperienceTable;
+import Utilities.SQLResultParser;
 import Utilities.ThemeColors;
+import Utilities.Validator;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Map;
+
 /**
  *
  * @author Admin
@@ -49,11 +59,16 @@ public class AddExperienceWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jPanel1.setBackground(ThemeColors.BACKGROUND);
 
-        workPreferenceDetails.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
-        workPreferenceDetails.setForeground(ThemeColors.ON_SURFACE);
+        workPreferenceDetails.setBackground(ThemeColors.PRIMARY_CONTAINER);
+        workPreferenceDetails.setForeground(ThemeColors.ON_PRIMARY_CONTAINER);
 
         workDetailsLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         workDetailsLabel.setForeground(ThemeColors.ON_SURFACE);
@@ -94,7 +109,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
                 .addGroup(companyTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(companyLabel)
                     .addComponent(company, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         companyTabLayout.setVerticalGroup(
             companyTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +155,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
 
         dateStartedLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         dateStartedLabel.setForeground(ThemeColors.ON_BACKGROUND);
-        dateStartedLabel.setText("Date Started");
+        dateStartedLabel.setText("Date Started (YYYY-MM-DD)");
 
         dateStarted.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         dateStarted.setPlaceHolder("Kailan nagsimula");
@@ -154,7 +169,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
                 .addGroup(dateStartedTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dateStarted, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dateStartedLabel))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dateStartedTabLayout.setVerticalGroup(
             dateStartedTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,7 +185,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
 
         dateEndedLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         dateEndedLabel.setForeground(ThemeColors.ON_BACKGROUND);
-        dateEndedLabel.setText("Date Ended");
+        dateEndedLabel.setText("Date Ended (YYYY-MM-DD)");
 
         dateEnded.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         dateEnded.setPlaceHolder("Kailan natapos");
@@ -184,7 +199,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
                 .addGroup(dateEndedTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dateEnded, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dateEndedLabel))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dateEndedTabLayout.setVerticalGroup(
             dateEndedTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,7 +314,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 604, Short.MAX_VALUE)
+            .addGap(0, 703, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -326,10 +341,14 @@ public class AddExperienceWindow extends javax.swing.JFrame {
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         //Save data to table
-        
-        //close frame
-        dispose();
+        submitExperience();
     }//GEN-LAST:event_saveActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        // TODO add your handling code here:
+        //Update the table
+        ExperienceTable.updateTable();
+    }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
@@ -384,4 +403,105 @@ public class AddExperienceWindow extends javax.swing.JFrame {
     private javax.swing.JLabel workDetailsLabel;
     private javax.swing.JPanel workPreferenceDetails;
     // End of variables declaration//GEN-END:variables
+
+    private void submitExperience() {
+        // Get the values from the textfields
+        String company = this.company.getText();
+        String position = this.position.getText();
+        String dateStarted = this.dateStarted.getText();
+        String dateEnded = this.dateEnded.getText();
+        String country = this.chooseCountry.getSelectedItem().toString();
+        boolean isPresentWork = this.presentWork.isSelected();
+
+        // Check if the fields are empty
+        if (company.isEmpty() || position.isEmpty() || dateStarted.isEmpty() || dateEnded.isEmpty() || country.isEmpty()) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Please fill in all the fields", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        // Check if data is valid
+        else if (!Validator.isDateInverted(dateStarted) || !Validator.isDateInverted(dateEnded)) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Please enter a valid date format (YYYY-MM-DD)", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        // Check if the date started is before the date ended
+        else if (dateStarted.compareTo(dateEnded) > 0) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Date started should be before the date ended", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        else if (!Validator.isAlphaNumeric(company)) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Company name should be alphanumeric", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        else if (!Validator.isAlphaNumeric(position)) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Position should be alphanumeric", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+        else {
+            //Insert the data to the database
+            //Insert the values to the database
+            //Create a new SQLResultParser object
+            SQLResultParser sqlResultParser = new SQLResultParser() {
+                @Override
+                public ArrayList<Map> sqlQuery() {
+                    //Create a new SQLHandler object
+                    SQLHandler sqlHandler = new SQLHandler();
+                    //Create a new query
+                    String query = "INSERT INTO work_experience (UserID, Company, Position, DateStarted, DateEnded, CountryID, isPresent) VALUES ('" + Auth.userId + "', '" + company + "', '" + position + "', '" + dateStarted + "', '" + dateEnded + "', (SELECT CountryID FROM countries WHERE CountryName = '"+ country +"') ,'" + (isPresentWork ? 1 : 0) + "')";
+                    //Change query if isPresentWork is true - set DateEnded to NULL
+                    if (isPresentWork) {
+                        query = "INSERT INTO work_experience (UserID, Company, Position, DateStarted, CountryID, isPresent) VALUES ('" + Auth.userId + "', '" + company + "', '" + position + "', '" + dateStarted + "', (SELECT CountryID FROM countries WHERE CountryName = '"+ country +"') ,'" + 1 + "')";
+                    }
+                    //Execute the query
+                    sqlHandler.createQuery(query).executeQuery();
+                    //Return the results
+                    return sqlHandler.getResults();
+                }
+            };
+
+            //Check if the result is successful
+            if (sqlResultParser.getResultsSize() > 0) {
+                //If successful, close the form
+                this.dispose();
+            } else {
+                //If not successful, show a dialog error message
+                JOptionPane.showMessageDialog(null, "Error: Can't submit the data!", "Submit Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
+    private void generateCountry() {
+        //Create a new SQLResultParser object
+        SQLResultParser sqlResultParser = new SQLResultParser() {
+            @Override
+            public ArrayList<Map> sqlQuery() {
+                //Create a new SQLHandler object
+                SQLHandler sqlHandler = new SQLHandler();
+                //Create a new query
+                String query = "SELECT CountryName FROM countries";
+                //Execute the query
+                sqlHandler.createQuery(query).executeQuery();
+                //Return the results
+                return sqlHandler.getResults();
+            }
+        };
+
+        //Get the size of the results
+        int size = sqlResultParser.getResultsSize();
+        //Clear the combo box
+        this.chooseCountry.removeAllItems();
+        //Loop through the results and add them to the combo box
+        for (int i = 0; i < size; i++) {
+            this.chooseCountry.addItem(sqlResultParser.parseResults(i).getValueByKey("CountryName").toString());
+        }
+
+    }
+
+    //Load when the panel is shown
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        //Generate the country list
+        generateCountry();
+
+    }
 }

@@ -21,15 +21,14 @@ public class PanelAction extends javax.swing.JPanel {
     
     public void initEvent(TableActionEvent event, int row) {
         removeButton.addActionListener(new ActionListener() {
-            //dont know how or why this works but whatever
-            public void actionPerfomed(ActionEvent ae) {
-                event.onDelete(row);
-            } 
-
+            //Before deleting the row, make sure that the data is already deleted in the database
             @Override
-            public void actionPerformed(ActionEvent ae) {
+            public void actionPerformed(ActionEvent e) {
                 event.onDelete(row);
             }
+
+
+
         }); 
     }
 

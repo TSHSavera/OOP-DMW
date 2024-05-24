@@ -4,10 +4,14 @@
  */
 package Cards;
 
+import API.Auth;
 import API.SQLHandler;
 import Utilities.SQLResultParser;
 import Utilities.ThemeColors;
+import Utilities.Validator;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +40,8 @@ public class MyProfile extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel16 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
@@ -56,7 +59,6 @@ public class MyProfile extends javax.swing.JPanel {
         jComboBox9 = new javax.swing.JComboBox<>();
         jTextField13 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -71,15 +73,11 @@ public class MyProfile extends javax.swing.JPanel {
         jComboBox3 = new javax.swing.JComboBox<>();
         jPanel12 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
         jTextField21 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
@@ -94,20 +92,12 @@ public class MyProfile extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox10 = new javax.swing.JComboBox<>();
         jLabel30 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setBackground(ThemeColors.BACKGROUND);
         setForeground(ThemeColors.ON_BACKGROUND);
@@ -119,25 +109,9 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel1.setBackground(ThemeColors.BACKGROUND);
         jPanel1.setForeground(ThemeColors.ON_BACKGROUND);
         java.awt.GridBagLayout jPanel1Layout = new java.awt.GridBagLayout();
-        jPanel1Layout.columnWidths = new int[] {0, 5, 0};
+        jPanel1Layout.columnWidths = new int[] {0};
         jPanel1Layout.rowHeights = new int[] {0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0, 16, 0};
         jPanel1.setLayout(jPanel1Layout);
-
-        jPanel4.setOpaque(false);
-        jPanel4.setLayout(new java.awt.GridBagLayout());
-
-        jLabel1.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
-        jLabel1.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel1.setText("Mother's Name");
-        jPanel4.add(jLabel1, new java.awt.GridBagConstraints());
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 20;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        jPanel1.add(jPanel4, gridBagConstraints);
 
         jPanel5.setBackground(ThemeColors.BACKGROUND);
         jPanel5.setForeground(ThemeColors.ON_BACKGROUND);
@@ -311,16 +285,11 @@ public class MyProfile extends javax.swing.JPanel {
 
         jPanel9.setOpaque(false);
         jPanel9.setLayout(new java.awt.GridBagLayout());
-
-        jLabel18.setFont(new java.awt.Font("Cantarell", 1, 24)); // NOI18N
-        jLabel18.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel18.setText("My Profile");
-        jPanel9.add(jLabel18, new java.awt.GridBagConstraints());
-
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel9, gridBagConstraints);
@@ -479,22 +448,6 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel12, gridBagConstraints);
 
-        jPanel17.setOpaque(false);
-        jPanel17.setLayout(new java.awt.GridBagLayout());
-
-        jLabel33.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
-        jLabel33.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel33.setText("Father's Name");
-        jPanel17.add(jLabel33, new java.awt.GridBagConstraints());
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 24;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        jPanel1.add(jPanel17, gridBagConstraints);
-
         jPanel18.setOpaque(false);
         jPanel18.setLayout(new java.awt.GridBagLayout());
 
@@ -535,25 +488,6 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         jPanel2.add(jTextField1, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 21;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel2.add(jTextField2, gridBagConstraints);
-
-        jLabel25.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel25.setText("Contact Number");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel2.add(jLabel25, gridBagConstraints);
 
         jTextField21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -728,171 +662,75 @@ public class MyProfile extends javax.swing.JPanel {
         gridBagConstraints.weighty = 0.1;
         jPanel1.add(jPanel14, gridBagConstraints);
 
-        jPanel11.setOpaque(false);
-        java.awt.GridBagLayout jPanel11Layout = new java.awt.GridBagLayout();
-        jPanel11Layout.columnWidths = new int[] {0, 16, 0, 16, 0};
-        jPanel11Layout.rowHeights = new int[] {0, 8, 0};
-        jPanel11.setLayout(jPanel11Layout);
+        jPanel13.setOpaque(false);
 
-        jLabel20.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel20.setText("Maiden Middle Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jLabel20, gridBagConstraints);
+        jLabel27.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel27.setForeground(ThemeColors.ON_BACKGROUND);
+        jLabel27.setText("My Profile");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+        jPanel15.setOpaque(false);
+
+        jButton1.setBackground(ThemeColors.PRIMARY);
+        jButton1.setForeground(ThemeColors.ON_PRIMARY);
+        jButton1.setText("Update Data");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 24;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jTextField4, gridBagConstraints);
-
-        jLabel23.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel23.setText("Maiden Last Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jLabel23, gridBagConstraints);
-
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 24;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jTextField9, gridBagConstraints);
+        jPanel15.add(jButton1);
 
-        jLabel26.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel26.setText("Maiden First Name");
+        jButton2.setBackground(ThemeColors.PRIMARY);
+        jButton2.setForeground(ThemeColors.ON_PRIMARY);
+        jButton2.setText("Save Edits");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jPanel15.add(jButton2);
+
+        jButton3.setBackground(ThemeColors.ERROR);
+        jButton3.setForeground(ThemeColors.ON_ERROR);
+        jButton3.setText("Cancel Edits");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jPanel15.add(jButton3);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addContainerGap(10, Short.MAX_VALUE))
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jLabel26, gridBagConstraints);
-
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 24;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel11.add(jTextField10, gridBagConstraints);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 22;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        jPanel1.add(jPanel11, gridBagConstraints);
-
-        jPanel6.setOpaque(false);
-        java.awt.GridBagLayout jPanel6Layout = new java.awt.GridBagLayout();
-        jPanel6Layout.columnWidths = new int[] {0, 16, 0, 16, 0};
-        jPanel6Layout.rowHeights = new int[] {0, 8, 0};
-        jPanel6.setLayout(jPanel6Layout);
-
-        jLabel4.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel4.setText("Middle Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jLabel4, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 23;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jTextField3, gridBagConstraints);
-
-        jLabel10.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel10.setText("Last Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jLabel10, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 23;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jTextField11, gridBagConstraints);
-
-        jLabel11.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel11.setText("First Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jLabel11, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 23;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        jPanel6.add(jTextField12, gridBagConstraints);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 26;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        jPanel1.add(jPanel6, gridBagConstraints);
+        jPanel1.add(jPanel13, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -933,18 +771,6 @@ public class MyProfile extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField21ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         // TODO add your handling code here:
         if (evt.getStateChange() == ItemEvent.SELECTED) {
@@ -974,7 +800,8 @@ public class MyProfile extends javax.swing.JPanel {
             jComboBox10.removeAllItems();
             for (String city : cities) {
                 jComboBox10.addItem(city);
-            };
+            }
+            ;
         }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
@@ -1007,7 +834,8 @@ public class MyProfile extends javax.swing.JPanel {
             jComboBox2.removeAllItems();
             for (String city : cities) {
                 jComboBox2.addItem(city);
-            };
+            }
+            ;
         }
     }//GEN-LAST:event_jComboBox3ItemStateChanged
 
@@ -1043,12 +871,47 @@ public class MyProfile extends javax.swing.JPanel {
             jComboBox6.removeAllItems();
             for (String barangay : barangays) {
                 jComboBox6.addItem(barangay);
-            };
+            }
+            ;
         }
     }//GEN-LAST:event_jComboBox10ItemStateChanged
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        //Enable jButton 2 and 3
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        //Enable all fields
+        editableFields();
+
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        //Disable jButton 2 and 3
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        //Rollback all changes
+        loadData();
+        //Disable all fields
+        uneditableFields();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        //submit the changes to the database
+        submitData();
+    }//GEN-LAST:event_jButton2MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -1056,32 +919,23 @@ public class MyProfile extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1089,38 +943,30 @@ public class MyProfile extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
     //Generate the list of provinces in the combobox
@@ -1165,6 +1011,229 @@ public class MyProfile extends javax.swing.JPanel {
     public void addNotify() {
         super.addNotify();
         generateProvinces();
+        //Disable jButton 2 and 3
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        //Disable all fields
+        uneditableFields();
+        //Load all the data from the database
+        loadData();
     }
 
-}
+    private void uneditableFields() {
+        //Make all fields uneditable
+        jTextField1.setEditable(false);
+        jTextField5.setEditable(false);
+        jTextField6.setEditable(false);
+        jTextField7.setEditable(false);
+        jTextField8.setEditable(false);
+        jTextField13.setEditable(false);
+        jTextField14.setEditable(false);
+        jTextField15.setEditable(false);
+        jTextField16.setEditable(false);
+        jTextField18.setEditable(false);
+        jTextField20.setEditable(false);
+        jTextField21.setEditable(false);
+        jComboBox1.setEnabled(false);
+        jComboBox2.setEnabled(false);
+        jComboBox3.setEnabled(false);
+        jComboBox5.setEnabled(false);
+        jComboBox6.setEnabled(false);
+        jComboBox9.setEnabled(false);
+        jComboBox10.setEnabled(false);
+    }
+
+    private void editableFields() {
+        //Make all fields editable
+        jTextField1.setEditable(true);
+        jTextField5.setEditable(true);
+        jTextField6.setEditable(true);
+        jTextField7.setEditable(true);
+        jTextField8.setEditable(true);
+        jTextField13.setEditable(true);
+        jTextField14.setEditable(true);
+        jTextField15.setEditable(true);
+        jTextField16.setEditable(true);
+        jTextField18.setEditable(true);
+        jTextField20.setEditable(true);
+        jTextField21.setEditable(true);
+        jComboBox1.setEnabled(true);
+        jComboBox2.setEnabled(true);
+        jComboBox3.setEnabled(true);
+        jComboBox5.setEnabled(true);
+        jComboBox6.setEnabled(true);
+        jComboBox9.setEnabled(true);
+        jComboBox10.setEnabled(true);
+    }
+
+    private void loadData() {
+        //Query the database for the list of provinces
+        String query = "SELECT * FROM user WHERE UserID = " + Auth.userId;
+        //Call SQL Handler to execute the query
+        SQLHandler a = new SQLHandler();
+        a.createQuery(query).executeQuery();
+
+        //For each row in the result set, add the province name to the list
+        SQLResultParser parser = new SQLResultParser() {
+            @Override
+            public ArrayList<Map> sqlQuery() {
+                return a.getResults();
+            }
+        };
+        //For each row in the result set, add the province name to the list
+        for (int i = 0; i < parser.getResultsSize(); i++) {
+            var result = parser.parseResults(i);
+            jTextField8.setText(result.getValueByKey("FirstName").toString());
+            jTextField5.setText(result.getValueByKey("MiddleName").toString());
+            jTextField6.setText(result.getValueByKey("LastName").toString());
+            jTextField7.setText(result.getValueByKey("Suffix").toString());
+            jTextField1.setText(result.getValueByKey("EmailAddress").toString());
+            jTextField16.setText(result.getValueByKey("Birthdate").toString());
+
+            //Set ComboBoxes Value
+            jComboBox5.setSelectedItem(result.getValueByKey("Gender").toString());
+        }
+
+        //Check if there's existing profile data
+        query = "SELECT profile.*, municipalities.*, provinces.*, barangay.* FROM profile INNER JOIN provinces ON profile.ProvinceID = provinces.ProvinceID INNER JOIN municipalities ON profile.MunicipalityID = municipalities.MunicipalityID INNER JOIN barangay ON profile.BarangayID = barangay.BarangayID WHERE UserID = " + Auth.userId;
+        a.createQuery(query).executeQuery();
+        if (a.getResults().isEmpty()) {
+            return;
+        } else {
+            //Put the data in the fields
+            parser = new SQLResultParser() {
+                @Override
+                public ArrayList<Map> sqlQuery() {
+                    return a.getResults();
+                }
+            };
+            for (int i = 0; i < parser.getResultsSize(); i++) {
+                var result = parser.parseResults(i);
+                jTextField21.setText(result.getValueByKey("ContactNo").toString());
+                jTextField14.setText(result.getValueByKey("Height").toString());
+                jTextField15.setText(result.getValueByKey("Weight").toString());
+                jTextField13.setText(result.getValueByKey("Religion").toString());
+                jTextField18.setText(result.getValueByKey("House").toString());
+                jTextField20.setText(result.getValueByKey("StreetNo").toString());
+                jComboBox1.setSelectedItem(result.getValueByKey("ProvinceName").toString());
+                jComboBox10.setSelectedItem(result.getValueByKey("MunicipalityName").toString());
+                jComboBox6.setSelectedItem(result.getValueByKey("BarangayName").toString());
+                jComboBox3.setSelectedItem(result.getValueByKey("Birthplace_Mun").toString());
+                jComboBox2.setSelectedItem(result.getValueByKey("Birthplace_Pro").toString());
+                jComboBox9.setSelectedItem(result.getValueByKey("CivilStatus").toString());
+            }
+        }
+    }
+
+    private void submitData() {
+        //Get the values from the fields
+        String firstName = jTextField8.getText();
+        String middleName = jTextField5.getText();
+        String lastName = jTextField6.getText();
+        String suffix = jTextField7.getText();
+        String emailAddress = jTextField1.getText();
+        String birthdate = jTextField16.getText();
+        String mobileNumber = jTextField21.getText();
+        String height = jTextField14.getText();
+        String weight = jTextField15.getText();
+        String religion = jTextField13.getText();
+        String Civil = jComboBox9.getSelectedItem().toString();
+
+        //Address
+        String province = jComboBox1.getSelectedItem().toString();
+        String city = jComboBox10.getSelectedItem().toString();
+        String barangay = jComboBox6.getSelectedItem().toString();
+        String house = jTextField18.getText();
+        String street = jTextField20.getText();
+
+        //Place of Birth
+        String municipalityPOB = jComboBox3.getSelectedItem().toString();
+        String provincePOB = jComboBox2.getSelectedItem().toString();
+
+
+        //Check if all fields are filled
+        if (firstName.isEmpty() || middleName.isEmpty() || lastName.isEmpty() || emailAddress.isEmpty() || birthdate.isEmpty() || mobileNumber.isEmpty() || height.isEmpty() || weight.isEmpty() || religion.isEmpty() || province.isEmpty() || city.isEmpty() || barangay.isEmpty() || house.isEmpty() || street.isEmpty() || municipalityPOB.isEmpty() || provincePOB.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill out all fields", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        //Check one-by-one if the fields have valid inputs
+        if (!Validator.isEmail(emailAddress)) {
+            JOptionPane.showMessageDialog(null, "Invalid Email Address", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isDateInverted(birthdate)) {
+            JOptionPane.showMessageDialog(null, "Invalid Birthdate", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isMobileNumber(mobileNumber)) {
+            JOptionPane.showMessageDialog(null, "Invalid Mobile Number", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isNumeric(height)) {
+            JOptionPane.showMessageDialog(null, "Invalid Height", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isNumeric(weight)) {
+            JOptionPane.showMessageDialog(null, "Invalid Weight", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isAlphaNumeric(religion)) {
+            JOptionPane.showMessageDialog(null, "Invalid Religion", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isAlphaNumericSpaceSpecial(house)) {
+            JOptionPane.showMessageDialog(null, "Invalid House", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        if (!Validator.isAlphaNumericSpaceSpecial(street)) {
+            JOptionPane.showMessageDialog(null, "Invalid Street", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        //Prepare the query
+        String query = "UPDATE user SET FirstName = '" + firstName + "', MiddleName = '" + middleName + "', LastName = '" + lastName + "', Suffix = '" + suffix + "', EmailAddress = '" + emailAddress + "', Birthdate = '" + birthdate + "' WHERE UserID = " + Auth.userId;
+        //Update the user info first
+        SQLHandler a = new SQLHandler();
+
+        try {
+            a.createQuery(query).executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed to update user info", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+
+        //If the first update succeeded, update the rest of the info
+        //Check if there's already an existing record in the profile
+        query = "SELECT * FROM profile WHERE UserID = " + Auth.userId;
+        a.createQuery(query).executeQuery();
+
+        //If there's no existing record, insert a new one
+        if (a.getResults().isEmpty()) {
+            query = "INSERT INTO profile (UserID, ContactNo, Height, Weight, Religion, ProvinceID, MunicipalityID, BarangayID, House, StreetNo, Birthplace_Mun, Birthplace_Pro, CivilStatus) VALUES (" + Auth.userId + ", '" + mobileNumber + "', " + height + ", " + weight + ", '" + religion + "', (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + province + "'), (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '" + city + "'), (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay + "'), '" + house + "', '" + street + "', '" + municipalityPOB + "', '" + provincePOB + "', '" + Civil + "')";
+            System.out.println("Used Insert");
+        } else {
+            //If there's an existing record, update the record
+            query = "UPDATE profile SET ContactNo = '" + mobileNumber + "', Height = " + height + ", Weight = " + weight + ", Religion = '" + religion + "', ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '"+ province + "'), MunicipalityID = (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '"+ city + "'), BarangayID = (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay +"'), House = '" + house + "', StreetNo = '" + street + "', Birthplace_Mun = '" + municipalityPOB + "', Birthplace_Pro = '" + provincePOB + "', CivilStatus = '" + Civil + "' WHERE UserID = " + Auth.userId;
+            System.out.println("Used Update");
+        }
+        //Execute the query
+        try {
+            a.createQuery(query).executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed to update profile info", "Error", JOptionPane.ERROR_MESSAGE);
+            System.out.println(e);
+            e.printStackTrace();
+            return;
+        }
+
+        //If both updates succeeded, show a success message
+        JOptionPane.showMessageDialog(null, "Profile Updated", "Success", JOptionPane.INFORMATION_MESSAGE);
+        //Disable jButton 2 and 3
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        //Disable all fields
+        uneditableFields();
+        //Update the data
+        loadData();
+    }}

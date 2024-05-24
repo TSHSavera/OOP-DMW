@@ -9,6 +9,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosed" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosed"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -24,7 +27,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="604" max="32767" attributes="0"/>
+          <EmptySpace min="0" pref="703" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -118,10 +121,10 @@
         <Container class="javax.swing.JPanel" name="workPreferenceDetails">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="ThemeColors.SURFACE_CONTAINER_HIGH" type="code"/>
+              <Connection code="ThemeColors.PRIMARY_CONTAINER" type="code"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="ThemeColors.ON_SURFACE" type="code"/>
+              <Connection code="ThemeColors.ON_PRIMARY_CONTAINER" type="code"/>
             </Property>
           </Properties>
 
@@ -175,7 +178,7 @@
                           <Component id="companyLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="company" alignment="0" min="-2" pref="562" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace pref="120" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -283,7 +286,7 @@
                           <Component id="dateStarted" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                           <Component id="dateStartedLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -308,7 +311,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="ThemeColors.ON_BACKGROUND" type="code"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Date Started"/>
+                <Property name="text" type="java.lang.String" value="Date Started (YYYY-MM-DD)"/>
               </Properties>
             </Component>
             <Component class="Components.PlaceHolderTextField" name="dateStarted">
@@ -337,7 +340,7 @@
                           <Component id="dateEnded" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                           <Component id="dateEndedLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -362,7 +365,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="ThemeColors.ON_BACKGROUND" type="code"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Date Ended"/>
+                <Property name="text" type="java.lang.String" value="Date Ended (YYYY-MM-DD)"/>
               </Properties>
             </Component>
             <Component class="Components.PlaceHolderTextField" name="dateEnded">

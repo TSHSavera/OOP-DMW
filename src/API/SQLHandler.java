@@ -96,6 +96,7 @@ public class SQLHandler {
             } else {
                 try {
                     try (Connection connection = createConnection()) {
+                        System.out.println(query);
                         statement = connection.createStatement();
                         statement.executeUpdate(query);
                         System.out.println("Query executed successfully!");
@@ -130,5 +131,10 @@ public class SQLHandler {
         for (var result : sqlHandler.getResults()) {
             System.out.println(result);
         }
+    }
+
+    public int getAffectedRows() {
+        //Get the number of affected rows
+        return results.size();
     }
 }

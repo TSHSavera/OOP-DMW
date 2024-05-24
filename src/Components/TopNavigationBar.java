@@ -35,9 +35,6 @@ public class TopNavigationBar extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         jLabel3 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         setBackground(ThemeColors.SURFACE);
         setLayout(new java.awt.GridLayout(1, 0));
@@ -58,23 +55,6 @@ public class TopNavigationBar extends javax.swing.JPanel {
         jPanel1.add(jLabel3);
 
         add(jPanel1);
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        jPanel2.setOpaque(false);
-        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT);
-        flowLayout1.setAlignOnBaseline(true);
-        jPanel2.setLayout(flowLayout1);
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(ThemeColors.ON_SURFACE);
-        jLabel4.setText("jLabel4");
-        jPanel2.add(jLabel4);
-
-        jLabel2.setIcon(Resources.getIcon(Resources.ICON_POEA_NT)
-        );
-        jPanel2.add(jLabel2);
-
-        add(jPanel2);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -82,10 +62,7 @@ public class TopNavigationBar extends javax.swing.JPanel {
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

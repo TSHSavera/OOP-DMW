@@ -40,21 +40,21 @@ public class DashboardLayout extends JFrame {
         mainPanel.add(sideNavigationBar, "pushy, growy, dock west, width 250");
 
         //Instantiate the panels to be included in the card
-        DashboardHome a = new DashboardHome();
         MyProfile b = new MyProfile();
         MyEducation c = new MyEducation();
         MyExperience d = new MyExperience();
-        MyDocuments e = new MyDocuments();
+        MyTrainings e = new MyTrainings();
+        //MyDocuments e = new MyDocuments();
         //DashboardExtras a = new DashboardExtras();
 
 
         
         //Add the cards
-        cardContainer.add(a, "dashboard");
         cardContainer.add(b, "profile");
         cardContainer.add(c, "education");
         cardContainer.add(d, "experience");
-        cardContainer.add(e, "documents");
+        cardContainer.add(e, "trainings");
+        //cardContainer.add(e, "documents");
         
         cardContainer.setBackground(ThemeColors.BACKGROUND);
         mainPanel.add(cardContainer, "wrap, dock center, grow, push, span");

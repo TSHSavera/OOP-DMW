@@ -39,54 +39,15 @@ public class SideNavigationBar extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        DashboardBtn = new javax.swing.JButton();
         ProfileBtn = new javax.swing.JButton();
         EducationBtn = new javax.swing.JButton();
         ExperienceBtn = new javax.swing.JButton();
-        DocumentBtn = new javax.swing.JButton();
-        ResumeBtn = new javax.swing.JButton();
         LogoutBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        TrainingsBtn = new javax.swing.JButton();
 
         setBackground(ThemeColors.SURFACE);
         setLayout(new java.awt.GridBagLayout());
-
-        DashboardBtn.setBackground(ThemeColors.SURFACE);
-        DashboardBtn.setForeground(ThemeColors.ON_BACKGROUND);
-        DashboardBtn.setText("Dashboard");
-        DashboardBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        DashboardBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DashboardBtn.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                DashboardBtnFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                DashboardBtnFocusLost(evt);
-            }
-        });
-        DashboardBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DashboardBtnMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                DashboardBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                DashboardBtnMouseExited(evt);
-            }
-        });
-        DashboardBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DashboardBtnActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 8;
-        gridBagConstraints.ipady = 8;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
-        add(DashboardBtn, gridBagConstraints);
 
         ProfileBtn.setBackground(ThemeColors.SURFACE);
         ProfileBtn.setForeground(ThemeColors.ON_BACKGROUND);
@@ -187,78 +148,13 @@ public class SideNavigationBar extends javax.swing.JPanel {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 8;
-        gridBagConstraints.ipady = 8;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
-        add(ExperienceBtn, gridBagConstraints);
-
-        DocumentBtn.setBackground(ThemeColors.SURFACE);
-        DocumentBtn.setForeground(ThemeColors.ON_BACKGROUND);
-        DocumentBtn.setText("My Documents");
-        DocumentBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        DocumentBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DocumentBtn.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                DocumentBtnFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                DocumentBtnFocusLost(evt);
-            }
-        });
-        DocumentBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DocumentBtnMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                DocumentBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                DocumentBtnMouseExited(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 8;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
-        add(DocumentBtn, gridBagConstraints);
-
-        ResumeBtn.setBackground(ThemeColors.SURFACE);
-        ResumeBtn.setForeground(ThemeColors.ON_BACKGROUND);
-        ResumeBtn.setText("My Resume");
-        ResumeBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        ResumeBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ResumeBtn.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                ResumeBtnFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                ResumeBtnFocusLost(evt);
-            }
-        });
-        ResumeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ResumeBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ResumeBtnMouseExited(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.ipadx = 8;
-        gridBagConstraints.ipady = 8;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
-        add(ResumeBtn, gridBagConstraints);
+        add(ExperienceBtn, gridBagConstraints);
 
         LogoutBtn.setBackground(ThemeColors.SURFACE);
         LogoutBtn.setForeground(ThemeColors.ON_BACKGROUND);
@@ -298,16 +194,46 @@ public class SideNavigationBar extends javax.swing.JPanel {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.weighty = 0.1;
         add(jLabel1, gridBagConstraints);
+
+        TrainingsBtn.setBackground(ThemeColors.SURFACE);
+        TrainingsBtn.setForeground(ThemeColors.ON_BACKGROUND);
+        TrainingsBtn.setText("My Trainings");
+        TrainingsBtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        TrainingsBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TrainingsBtn.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TrainingsBtnFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TrainingsBtnFocusLost(evt);
+            }
+        });
+        TrainingsBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TrainingsBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TrainingsBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TrainingsBtnMouseExited(evt);
+            }
+        });
+        TrainingsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TrainingsBtnActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(3, 3, 3, 3);
+        add(TrainingsBtn, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void DashboardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DashboardBtnActionPerformed
-
-    private void DashboardBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBtnMouseEntered
-        // TODO add your handling code here:
-        DashboardBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-    }//GEN-LAST:event_DashboardBtnMouseEntered
 
     private void ProfileBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfileBtnMouseEntered
         // TODO add your handling code here:
@@ -324,25 +250,10 @@ public class SideNavigationBar extends javax.swing.JPanel {
         ExperienceBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
     }//GEN-LAST:event_ExperienceBtnMouseEntered
 
-    private void DocumentBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseEntered
-        // TODO add your handling code here:
-        DocumentBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-    }//GEN-LAST:event_DocumentBtnMouseEntered
-
-    private void ResumeBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResumeBtnMouseEntered
-        // TODO add your handling code here:
-        ResumeBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-    }//GEN-LAST:event_ResumeBtnMouseEntered
-
     private void LogoutBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseEntered
         // TODO add your handling code here:
         LogoutBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
     }//GEN-LAST:event_LogoutBtnMouseEntered
-
-    private void DashboardBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBtnMouseExited
-        // TODO add your handling code here:
-        DashboardBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-    }//GEN-LAST:event_DashboardBtnMouseExited
 
     private void ProfileBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProfileBtnMouseExited
         // TODO add your handling code here:
@@ -359,32 +270,10 @@ public class SideNavigationBar extends javax.swing.JPanel {
         ExperienceBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     }//GEN-LAST:event_ExperienceBtnMouseExited
 
-    private void DocumentBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseExited
-        // TODO add your handling code here:
-        DocumentBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-    }//GEN-LAST:event_DocumentBtnMouseExited
-
-    private void ResumeBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResumeBtnMouseExited
-        // TODO add your handling code here:
-        ResumeBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-    }//GEN-LAST:event_ResumeBtnMouseExited
-
     private void LogoutBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutBtnMouseExited
         // TODO add your handling code here:
         LogoutBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     }//GEN-LAST:event_LogoutBtnMouseExited
-
-    private void DashboardBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DashboardBtnFocusGained
-        // TODO add your handling code here:
-        DashboardBtn.setBackground(ThemeColors.PRIMARY);
-        DashboardBtn.setForeground(ThemeColors.ON_PRIMARY);
-    }//GEN-LAST:event_DashboardBtnFocusGained
-
-    private void DashboardBtnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DashboardBtnFocusLost
-        // TODO add your handling code here:
-        DashboardBtn.setBackground(ThemeColors.SURFACE);
-        DashboardBtn.setForeground(ThemeColors.ON_SURFACE);
-    }//GEN-LAST:event_DashboardBtnFocusLost
 
     private void ProfileBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ProfileBtnFocusGained
         // TODO add your handling code here:
@@ -404,18 +293,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
         ExperienceBtn.setForeground(ThemeColors.ON_PRIMARY);
     }//GEN-LAST:event_ExperienceBtnFocusGained
 
-    private void DocumentBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DocumentBtnFocusGained
-        // TODO add your handling code here:
-        DocumentBtn.setBackground(ThemeColors.PRIMARY);
-        DocumentBtn.setForeground(ThemeColors.ON_PRIMARY);
-    }//GEN-LAST:event_DocumentBtnFocusGained
-
-    private void ResumeBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ResumeBtnFocusGained
-        // TODO add your handling code here:
-        ResumeBtn.setBackground(ThemeColors.PRIMARY);
-        ResumeBtn.setForeground(ThemeColors.ON_PRIMARY);
-    }//GEN-LAST:event_ResumeBtnFocusGained
-
     private void ProfileBtnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ProfileBtnFocusLost
         // TODO add your handling code here:
         ProfileBtn.setBackground(ThemeColors.SURFACE);
@@ -434,18 +311,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
         ExperienceBtn.setForeground(ThemeColors.ON_SURFACE);
     }//GEN-LAST:event_ExperienceBtnFocusLost
 
-    private void DocumentBtnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DocumentBtnFocusLost
-        // TODO add your handling code here:
-        DocumentBtn.setBackground(ThemeColors.SURFACE);
-        DocumentBtn.setForeground(ThemeColors.ON_SURFACE);
-    }//GEN-LAST:event_DocumentBtnFocusLost
-
-    private void ResumeBtnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ResumeBtnFocusLost
-        // TODO add your handling code here:
-        ResumeBtn.setBackground(ThemeColors.SURFACE);
-        ResumeBtn.setForeground(ThemeColors.ON_SURFACE);
-    }//GEN-LAST:event_ResumeBtnFocusLost
-
     private void LogoutBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LogoutBtnFocusGained
         // TODO add your handling code here:
         LogoutBtn.setBackground(ThemeColors.PRIMARY);
@@ -457,13 +322,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
         LogoutBtn.setBackground(ThemeColors.SURFACE);
         LogoutBtn.setForeground(ThemeColors.ON_SURFACE);
     }//GEN-LAST:event_LogoutBtnFocusLost
-
-    private void DashboardBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBtnMouseClicked
-        // TODO add your handling code here:
-        //Switch layout to DashboardLayout
-        switchLayout(DashboardLayout.cardContainer, "dashboard");
-
-    }//GEN-LAST:event_DashboardBtnMouseClicked
 
     private void ExperienceBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExperienceBtnMouseClicked
         // TODO add your handling code here:
@@ -477,12 +335,6 @@ public class SideNavigationBar extends javax.swing.JPanel {
         //Switch layout to EducationLayout
         switchLayout(DashboardLayout.cardContainer, "education");
     }//GEN-LAST:event_EducationBtnMouseClicked
-
-    private void DocumentBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentBtnMouseClicked
-        // TODO add your handling code here:
-        //Switch layout to DocumentLayout
-        switchLayout(DashboardLayout.cardContainer, "documents");
-    }//GEN-LAST:event_DocumentBtnMouseClicked
     
     private void ResumeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResumeBtnMouseClicked
         // TODO add your handling code here:
@@ -510,15 +362,46 @@ public class SideNavigationBar extends javax.swing.JPanel {
         switchLayout(DashboardLayout.cardContainer, "profile");
     }//GEN-LAST:event_ProfileBtnMouseClicked
 
+    private void TrainingsBtnFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TrainingsBtnFocusGained
+        // TODO add your handling code here:
+        TrainingsBtn.setBackground(ThemeColors.PRIMARY);
+        TrainingsBtn.setForeground(ThemeColors.ON_PRIMARY);
+    }//GEN-LAST:event_TrainingsBtnFocusGained
+
+    private void TrainingsBtnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TrainingsBtnFocusLost
+        // TODO add your handling code here:
+        TrainingsBtn.setBackground(ThemeColors.SURFACE);
+        TrainingsBtn.setForeground(ThemeColors.ON_SURFACE);
+    }//GEN-LAST:event_TrainingsBtnFocusLost
+
+    private void TrainingsBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrainingsBtnMouseClicked
+        // TODO add your handling code here:
+        //Switch layout to TrainingsLayout
+        switchLayout(DashboardLayout.cardContainer, "trainings");
+
+    }//GEN-LAST:event_TrainingsBtnMouseClicked
+
+    private void TrainingsBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrainingsBtnMouseEntered
+        // TODO add your handling code here:
+        TrainingsBtn.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ThemeColors.PRIMARY, 2), BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+    }//GEN-LAST:event_TrainingsBtnMouseEntered
+
+    private void TrainingsBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrainingsBtnMouseExited
+        // TODO add your handling code here:
+        TrainingsBtn.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+    }//GEN-LAST:event_TrainingsBtnMouseExited
+
+    private void TrainingsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TrainingsBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TrainingsBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DashboardBtn;
-    private javax.swing.JButton DocumentBtn;
     private javax.swing.JButton EducationBtn;
     private javax.swing.JButton ExperienceBtn;
     private javax.swing.JButton LogoutBtn;
     private javax.swing.JButton ProfileBtn;
-    private javax.swing.JButton ResumeBtn;
+    private javax.swing.JButton TrainingsBtn;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
