@@ -349,11 +349,11 @@ public class Trainings_FORM extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please enter a valid number of hours.", "Invalid Number of Hours", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        if (!Validator.isAlphaNumeric(trainingName)) {
+        if (!Validator.isAlphaNumericSpace(trainingName)) {
             JOptionPane.showMessageDialog(null, "Please enter a valid training name.", "Invalid Training Name", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        if (!Validator.isNumeric(certificateNo)) {
+        if (!Validator.isAlphaNumericSpecial(certificateNo)) {
             JOptionPane.showMessageDialog(null, "Please enter a valid certificate number.", "Invalid Certificate Number", JOptionPane.ERROR_MESSAGE);
             return;
         }

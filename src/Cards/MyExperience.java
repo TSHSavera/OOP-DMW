@@ -111,7 +111,7 @@ public class MyExperience extends javax.swing.JPanel {
         addExp.setVisible(true);
         addExp.pack();
         addExp.setLocationRelativeTo(null);
-        addExp.setAlwaysOnTop(true);
+        addExp.setAlwaysOnTop(false);
         addExp.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         
     }//GEN-LAST:event_addExperienceButtonActionPerformed

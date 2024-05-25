@@ -431,11 +431,11 @@ public class AddExperienceWindow extends javax.swing.JFrame {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Date started should be before the date ended", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
-        else if (!Validator.isAlphaNumeric(company)) {
+        else if (!Validator.isAlphaNumericSpace(company)) {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Company name should be alphanumeric", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
-        else if (!Validator.isAlphaNumeric(position)) {
+        else if (!Validator.isAlphaNumericSpace(position)) {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Position should be alphanumeric", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }

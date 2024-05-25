@@ -73,6 +73,9 @@ public class DashboardLayout extends JFrame {
             }
 
         });
+        //Set the default card
+        CardLayout cl = (CardLayout)(cardContainer.getLayout());
+        cl.show(cardContainer, "profile");
 
         // Add main panel to the frame
         add(mainPanel);

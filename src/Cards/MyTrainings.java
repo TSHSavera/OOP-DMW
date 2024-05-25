@@ -110,7 +110,7 @@ public class MyTrainings extends javax.swing.JPanel {
         trainings.setVisible(true);
         trainings.pack();
         trainings.setLocationRelativeTo(null);
-        trainings.setAlwaysOnTop(true);
+        trainings.setAlwaysOnTop(false);
         trainings.setResizable(false);
         trainings.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_AddTrainingMouseClicked
