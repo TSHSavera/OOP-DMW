@@ -737,15 +737,15 @@ public class SignUp extends javax.swing.JFrame {
             EnableSignUp();
         } else {
             //Check if the inputs are valid - one by one so that the user can see which field is invalid - then display an error message - then return
-            if (!Validator.isAlpha(firstName)) {
+            if (!Validator.isAlphaSpace(firstName)) {
                 JOptionPane.showMessageDialog(null, "First name is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
                 //Enable the fields again
                 EnableSignUp();
-            } else if (!Validator.isAlpha(middleName)) {
+            } else if (!Validator.isAlphaSpace(middleName)) {
                 JOptionPane.showMessageDialog(null, "Middle name is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
                 //Enable the fields again
                 EnableSignUp();
-            } else if (!Validator.isAlpha(lastName)) {
+            } else if (!Validator.isAlphaSpace(lastName)) {
                 JOptionPane.showMessageDialog(null, "Last name is invalid!", "Error", JOptionPane.ERROR_MESSAGE);
                 //Enable the fields again
                 EnableSignUp();

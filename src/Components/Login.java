@@ -10,6 +10,7 @@ package Components;
  */
 import API.Auth;
 import API.SQLHandler;
+import Layouts.AdminDashboardLayout;
 import Layouts.DashboardLayout;
 import Utilities.*;
 import Resources.*;
@@ -62,7 +63,6 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Email");
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Mjcg@gmail.com");
         jTextField2.setOpaque(true);
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -80,7 +80,6 @@ public class Login extends javax.swing.JFrame {
 
         jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPasswordField1.setText("maryjane123");
 
         jButton1.setBackground(ThemeColors.PRIMARY);
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -222,20 +221,56 @@ public class Login extends javax.swing.JFrame {
         //Check if the email and password is correct
         //Perfom sql query to get the credentials
 
-        //Check if the query has results
-        if (Auth.login(email, password)) {
-            //If the query has results, then the user is logged in
-            //Show the dashboard
-            DashboardLayout dashboard = new DashboardLayout();
-            dashboard.setVisible(true);
-            dashboard.pack();
-            dashboard.setLocationRelativeTo(null);
-            this.dispose();
+        //Check if the email field is an email, if not query it for admin username
+        if (!Validator.isEmail(email)) {
+            //Check if username and password is correct
+            if (Auth.loginAdmin(email, password)) {
+                //If the query has results, then the user is logged in
+                //Also, inform the user that they are logged in
+                JOptionPane.showMessageDialog(null, "Login successful. Please wait while we load your dashboard", "Login Success", JOptionPane.INFORMATION_MESSAGE);
+                //Disable the login button and the text fields
+                jButton1.setEnabled(false);
+                jTextField2.setEnabled(false);
+                jPasswordField1.setEnabled(false);
+                jButton2.setEnabled(false);
+                //Show the dashboard
+                AdminDashboardLayout dashboard = new AdminDashboardLayout();
+                dashboard.setVisible(true);
+                dashboard.pack();
+                dashboard.setLocationRelativeTo(null);
+                this.dispose();
+
+            } else {
+                //If the query has no results, then the user is not logged in
+                //Show an error message
+                JOptionPane.showMessageDialog(null, "Invalid email or password", "Login Error", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
-            //If the query has no results, then the user is not logged in
-            //Show an error message
-            JOptionPane.showMessageDialog(null, "Invalid email or password", "Login Error", JOptionPane.ERROR_MESSAGE);
+            //If the email is an email, then query it for user email
+            //Check if the query has results
+            if (Auth.login(email, password)) {
+                //If the query has results, then the user is logged in
+                //Also, inform the user that they are logged in
+                JOptionPane.showMessageDialog(null, "Login successful. Please wait while we load your dashboard", "Login Success", JOptionPane.INFORMATION_MESSAGE);
+                //Disable the login button and the text fields
+                jButton1.setEnabled(false);
+                jTextField2.setEnabled(false);
+                jPasswordField1.setEnabled(false);
+                jButton2.setEnabled(false);
+                //Show the dashboard
+                DashboardLayout dashboard = new DashboardLayout();
+                dashboard.setVisible(true);
+                dashboard.pack();
+                dashboard.setLocationRelativeTo(null);
+                this.dispose();
+            } else {
+                //If the query has no results, then the user is not logged in
+                //Show an error message
+                JOptionPane.showMessageDialog(null, "Invalid email or password", "Login Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+
+
 
     }//GEN-LAST:event_jButton1MouseClicked
 

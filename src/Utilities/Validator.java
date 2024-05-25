@@ -91,4 +91,8 @@ public class Validator {
     public static boolean isMobileNumber(String mobileNumber) {
         return mobileNumber.matches("^(09|\\+639)\\d{9}$");
     }
+
+    public static boolean isAlphaSpecialSpace(String data) {
+        return data.matches("^[a-zA-Z!@#$%^&*\\s]*$");
+    }
 }

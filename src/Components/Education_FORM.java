@@ -151,7 +151,7 @@ public class Education_FORM extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel8.setForeground(ThemeColors.ON_BACKGROUND);
-        jLabel8.setText("Acadrmic Year");
+        jLabel8.setText("Academic Year");
 
         jLabel9.setFont(new java.awt.Font("sansserif", 0, 10)); // NOI18N
         jLabel9.setForeground(ThemeColors.ON_BACKGROUND);
@@ -375,7 +375,7 @@ public class Education_FORM extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error: Please input a valid academic year.", "Submit Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        if (!Validator.isAlphaSpace(educationalAttained)) {
+        if (!Validator.isAlphaSpecialSpace(educationalAttained)) {
             //If not valid, show an error message
             JOptionPane.showMessageDialog(null, "Error: Please input a valid educational attained.", "Submit Error", JOptionPane.ERROR_MESSAGE);
             return;
@@ -400,6 +400,10 @@ public class Education_FORM extends javax.swing.JFrame {
                 SQLHandler sqlHandler = new SQLHandler();
                 //Create a new query
                 String query = "INSERT INTO educational (UserID, Category, School, Course, AcademicYear, Educ_Attainment) VALUES (" + Auth.userId + ", '" + category + "', '" + school + "', '" + course + "', '" + academicYear + "', '" + educationalAttained + "')";
+                //If PRIMARY or SECONDARY, set the Course to NULL
+                if (category.equals("Primary") || category.equals("Secondary")) {
+                    query = "INSERT INTO educational (UserID, Category, School, Course, AcademicYear, Educ_Attainment) VALUES (" + Auth.userId + ", '" + category + "', '" + school + "', NULL, '" + academicYear + "', '" + educationalAttained + "')";
+                }
                 //Execute the query
                 sqlHandler.createQuery(query).executeQuery();
                 //Return the results

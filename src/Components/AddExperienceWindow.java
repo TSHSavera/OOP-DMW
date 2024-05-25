@@ -70,7 +70,7 @@ public class AddExperienceWindow extends javax.swing.JFrame {
         workPreferenceDetails.setBackground(ThemeColors.PRIMARY_CONTAINER);
         workPreferenceDetails.setForeground(ThemeColors.ON_PRIMARY_CONTAINER);
 
-        workDetailsLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        workDetailsLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         workDetailsLabel.setForeground(ThemeColors.ON_SURFACE);
         workDetailsLabel.setText("Work Experience Details");
 
@@ -413,18 +413,21 @@ public class AddExperienceWindow extends javax.swing.JFrame {
         String country = this.chooseCountry.getSelectedItem().toString();
         boolean isPresentWork = this.presentWork.isSelected();
 
-        // Check if the fields are empty
-        if (company.isEmpty() || position.isEmpty() || dateStarted.isEmpty() || dateEnded.isEmpty() || country.isEmpty()) {
+        // Check if the fields are empty - if isPresent is false
+        if (isPresentWork && (company.isEmpty() || position.isEmpty() || dateStarted.isEmpty())) {
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Please fill in all the fields", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        } else if (!isPresentWork && (company.isEmpty() || position.isEmpty() || dateStarted.isEmpty() || dateEnded.isEmpty())) {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Please fill in all the fields", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
-        // Check if data is valid
-        else if (!Validator.isDateInverted(dateStarted) || !Validator.isDateInverted(dateEnded)) {
+        // Check if data is valid - check is dateEnded if isPresentWork is false
+        else if (!Validator.isDateInverted(dateStarted) || (!isPresentWork && !Validator.isDateInverted(dateEnded))) {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Please enter a valid date format (YYYY-MM-DD)", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
-        // Check if the date started is before the date ended
-        else if (dateStarted.compareTo(dateEnded) > 0) {
+        // Check if the date started is before the date ended - check this if isPresentWork is false
+        else if (!isPresentWork && dateStarted.compareTo(dateEnded) > 0) {
             // Show an error message
             JOptionPane.showMessageDialog(this, "Date started should be before the date ended", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }

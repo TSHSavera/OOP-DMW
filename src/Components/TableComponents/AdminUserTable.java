@@ -5,6 +5,7 @@
 package Components.TableComponents;
 import API.Auth;
 import API.SQLHandler;
+import Components.Resume;
 import Components.TableComponents.TableActionCellRenderer;
 import Components.TableComponents.TableActionCellEditor;
 import Components.TableComponents.TableActionEvent;
@@ -20,28 +21,35 @@ import java.util.Map;
  *
  * @author Admin
  */
-public class ExperienceTable extends javax.swing.JPanel {
+public class AdminUserTable extends javax.swing.JPanel {
 
     /**
      * Creates new form ExperiencePanel
      * @param jTable1
      */
-    public ExperienceTable() {
+    public AdminUserTable() {
         initComponents();
-        TableActionEvent event = new TableActionEvent() {
+        TableAdminActionEvent event = new TableAdminActionEvent() {
             @Override
             public void onDelete(int row) {
                 //Release a prompt to confirm the deletion
-                int dialogResult = JOptionPane.showConfirmDialog(null, "Would you like to delete this entry?", "Warning", JOptionPane.YES_NO_OPTION);
+                int dialogResult = JOptionPane.showConfirmDialog(null, "This will remove every record of the user. Proceed?", "Warning", JOptionPane.YES_NO_OPTION);
                 //Check if the user clicked yes
                 if (dialogResult == JOptionPane.YES_OPTION) {
                     //Delete the data from the database
                     SQLHandler sqlHandler = new SQLHandler();
-                    String query = "DELETE FROM work_experience WHERE UserID = " + Auth.userId + " AND Company = '" + jTable1.getValueAt(row, 1) + "' AND Position = '" + jTable1.getValueAt(row, 2) + "' AND CountryID = (SELECT CountryID FROM countries WHERE CountryName = '" + jTable1.getValueAt(row, 3) + "') AND DateStarted = '" + jTable1.getValueAt(row, 4) + "' AND DateEnded = '" + jTable1.getValueAt(row, 5) + "'";
-                    //If the user is still working in the company, set the DateEnded to NULL
-                    if(jTable1.getValueAt(row, 6).equals("Yes")) {
-                        query = "DELETE FROM work_experience WHERE UserID = " + Auth.userId + " AND Company = '" + jTable1.getValueAt(row, 1) + "' AND Position = '" + jTable1.getValueAt(row, 2) + "' AND CountryID = (SELECT CountryID FROM countries WHERE CountryName = '" + jTable1.getValueAt(row, 3) + "') AND DateStarted = '" + jTable1.getValueAt(row, 4) + "' AND DateEnded IS NULL";
-                    }
+                    //Delete the other records of the user
+                    String query = "DELETE FROM educational WHERE UserID = " + jTable1.getValueAt(row, 1);
+                    sqlHandler.createQuery(query).executeQuery();
+                    query = "DELETE FROM work_experience WHERE UserID = " + jTable1.getValueAt(row, 1);
+                    sqlHandler.createQuery(query).executeQuery();
+                    query = "DELETE FROM trainings WHERE UserID = " + jTable1.getValueAt(row, 1);
+                    sqlHandler.createQuery(query).executeQuery();
+                    query = "DELETE FROM profile WHERE UserID = " + jTable1.getValueAt(row, 1);
+                    sqlHandler.createQuery(query).executeQuery();
+
+                    //Delete the user
+                    query = "DELETE FROM user WHERE UserID = " + jTable1.getValueAt(row, 1);
                     sqlHandler.createQuery(query).executeQuery();
                     //If the data is deleted, update the table
                     if (sqlHandler.getAffectedRows() > 0) {
@@ -51,13 +59,29 @@ public class ExperienceTable extends javax.swing.JPanel {
                         DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
                         model.removeRow(row);
                         updateTable();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Failed to delete user", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 }
             }
+
+            @Override
+            public void onView(int row) {
+                //Open the resume of the user
+                Auth.userId = Integer.parseInt(jTable1.getValueAt(row, 1).toString());
+                Resume resume = new Resume();
+                resume.setVisible(true);
+                resume.pack();
+                resume.setLocationRelativeTo(null);
+                resume.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                resume.loadData();
+
+
+            }
         };
         
-        jTable1.getColumnModel().getColumn(0).setCellRenderer(new TableActionCellRenderer());
-        jTable1.getColumnModel().getColumn(0).setCellEditor(new TableActionCellEditor(event));
+        jTable1.getColumnModel().getColumn(0).setCellRenderer(new TableAdminActionCellRenderer());
+        jTable1.getColumnModel().getColumn(0).setCellEditor(new TableAdminActionCellEditor(event));
         
         JTableHeader header = jTable1.getTableHeader();
         header.setBackground(ThemeColors.SURFACE_CONTAINER_HIGH);
@@ -73,7 +97,7 @@ public class ExperienceTable extends javax.swing.JPanel {
                 //Create a new SQLHandler object
                 SQLHandler sqlHandler = new SQLHandler();
                 //Create a new query
-                String query = "SELECT work_experience.*, countries.* FROM work_experience INNER JOIN countries ON work_experience.CountryID = countries.CountryID WHERE work_experience.UserID = " + Auth.userId;
+                String query = "SELECT * FROM user";
                 //Execute the query
                 sqlHandler.createQuery(query).executeQuery();
                 //Return the results
@@ -88,7 +112,7 @@ public class ExperienceTable extends javax.swing.JPanel {
         model.setRowCount(0);
         //Loop through the results and add them to the table
         for (int i = 0; i < size; i++) {
-            model.addRow(new Object[]{null, sqlResultParser.parseResults(i).getValueByKey("Company"), sqlResultParser.parseResults(i).getValueByKey("Position"), sqlResultParser.parseResults(i).getValueByKey("CountryName"), sqlResultParser.parseResults(i).getValueByKey("DateStarted"), sqlResultParser.parseResults(i).getValueByKey("DateEnded"), (sqlResultParser.parseResults(i).getValueByKey("isPresent").toString().equals("1")) ? "Yes" : "No"});
+            model.addRow(new Object[]{null, sqlResultParser.parseResults(i).getValueByKey("UserID"), sqlResultParser.parseResults(i).getValueByKey("FirstName"), sqlResultParser.parseResults(i).getValueByKey("MiddleName"), sqlResultParser.parseResults(i).getValueByKey("LastName"), sqlResultParser.parseResults(i).getValueByKey("Suffix"), sqlResultParser.parseResults(i).getValueByKey("Gender"), sqlResultParser.parseResults(i).getValueByKey("Birthdate"), sqlResultParser.parseResults(i).getValueByKey("EmailAddress")});
         }
     }
     
@@ -120,14 +144,14 @@ public class ExperienceTable extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Action", "Company", "Position", "Country", "Date Start", "Date End", "Current Work?"
+                "Action", "UserID", "FirstName", "MiddleName", "LastName", "Suffix", "Gender", "Birthdate", "EmailAddress"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, false, false, false
+                true, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -145,9 +169,7 @@ public class ExperienceTable extends javax.swing.JPanel {
         jTable1.setRowHeight(40);
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setMinWidth(90);
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(90);
-            jTable1.getColumnModel().getColumn(0).setMaxWidth(90);
+            jTable1.getColumnModel().getColumn(0).setMinWidth(180);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -170,10 +192,10 @@ public class ExperienceTable extends javax.swing.JPanel {
     private static javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 
-    //Update table on load
-    @Override
-    public void addNotify() {
-        super.addNotify();
-        updateTable();
-    }
+//    //Update table on load
+//    @Override
+//    public void addNotify() {
+//        super.addNotify();
+//        updateTable();
+//    }
 }

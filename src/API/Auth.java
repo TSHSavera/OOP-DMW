@@ -35,6 +35,19 @@ public class Auth {
         return false;
     }
 
+    public static boolean loginAdmin (String un, String pw) {
+        //Create a query
+        SQLHandler a = new SQLHandler();
+        a.createQuery("SELECT * FROM admin WHERE AdminUN = '" + un + "' AND AdminPW = '" + pw + "'").executeQuery();
+
+        //Check if the query has results
+        if (!a.getResults().isEmpty()) {
+            return true;
+        }
+
+        return false;
+    }
+
     //Save user data
     public static void saveUserData() {
         //Create a query

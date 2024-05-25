@@ -154,4 +154,10 @@ public class TrainingTable extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private static javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        updateTable();
+    }
 }

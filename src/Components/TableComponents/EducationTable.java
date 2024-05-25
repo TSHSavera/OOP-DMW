@@ -33,6 +33,11 @@ public class EducationTable extends javax.swing.JPanel {
                     //Delete the data from the database
                     SQLHandler sqlHandler = new SQLHandler();
                     String query = "DELETE FROM educational WHERE UserID = " + Auth.userId + " AND Category = '" + jTable1.getValueAt(row, 1) + "' AND School = '" + jTable1.getValueAt(row, 2) + "' AND Course = '" + jTable1.getValueAt(row, 3) + "' AND AcademicYear = '" + jTable1.getValueAt(row, 4) + "' AND Educ_Attainment = '" + jTable1.getValueAt(row, 5) + "'";
+                    //If the course is empty, make it null
+                    if(jTable1.getValueAt(row, 3) == null) {
+                        query = "DELETE FROM educational WHERE UserID = " + Auth.userId + " AND Category = '" + jTable1.getValueAt(row, 1) + "' AND School = '" + jTable1.getValueAt(row, 2) + "' AND Course IS NULL AND AcademicYear = '" + jTable1.getValueAt(row, 4) + "' AND Educ_Attainment = '" + jTable1.getValueAt(row, 5) + "'";
+                    }
+
                     sqlHandler.createQuery(query).executeQuery();
                     //If the data is deleted, update the table
                     if (sqlHandler.getAffectedRows() > 0) {
@@ -151,5 +156,11 @@ public class EducationTable extends javax.swing.JPanel {
         for (int i = 0; i < size; i++) {
             model.addRow(new Object[]{null, sqlResultParser.parseResults(i).getValueByKey("Category"), sqlResultParser.parseResults(i).getValueByKey("School"), sqlResultParser.parseResults(i).getValueByKey("Course"), sqlResultParser.parseResults(i).getValueByKey("AcademicYear"), sqlResultParser.parseResults(i).getValueByKey("Educ_Attainment")});
         }
+    }
+
+    @Override
+    public void addNotify() {
+        super.addNotify();
+        updateTable();
     }
 }

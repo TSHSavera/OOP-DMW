@@ -6,6 +6,10 @@ package Cards;
 
 import API.Auth;
 import API.SQLHandler;
+import Components.Resume;
+import Components.TableComponents.EducationTable;
+import Components.TableComponents.ExperienceTable;
+import Components.TableComponents.TrainingTable;
 import Utilities.SQLResultParser;
 import Utilities.ThemeColors;
 import Utilities.Validator;
@@ -95,6 +99,7 @@ public class MyProfile extends javax.swing.JPanel {
         jPanel13 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -670,6 +675,21 @@ public class MyProfile extends javax.swing.JPanel {
 
         jPanel15.setOpaque(false);
 
+        jButton4.setBackground(ThemeColors.PRIMARY);
+        jButton4.setForeground(ThemeColors.ON_PRIMARY);
+        jButton4.setText("View Resume");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton4);
+
         jButton1.setBackground(ThemeColors.PRIMARY);
         jButton1.setForeground(ThemeColors.ON_PRIMARY);
         jButton1.setText("Update Data");
@@ -693,6 +713,11 @@ public class MyProfile extends javax.swing.JPanel {
                 jButton2MouseClicked(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel15.add(jButton2);
 
         jButton3.setBackground(ThemeColors.ERROR);
@@ -712,7 +737,7 @@ public class MyProfile extends javax.swing.JPanel {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel27)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel13Layout.setVerticalGroup(
@@ -720,7 +745,7 @@ public class MyProfile extends javax.swing.JPanel {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel27)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -842,7 +867,6 @@ public class MyProfile extends javax.swing.JPanel {
     private void jComboBox10ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox10ItemStateChanged
         // TODO add your handling code here:
         if (evt.getStateChange() == ItemEvent.SELECTED) {
-            System.out.println("Triggered");
             //Get the selected city/municipality
             var selectedCityElement = jComboBox10.getSelectedItem();
             assert selectedCityElement != null;
@@ -904,14 +928,41 @@ public class MyProfile extends javax.swing.JPanel {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         //submit the changes to the database
-        submitData();
+
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        // On click, open the resume panel
+        Resume resume = new Resume();
+        resume.setVisible(true);
+        resume.pack();
+        resume.setLocationRelativeTo(null);
+        resume.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        //Update the tables in the resume panel
+        EducationTable.updateTable();
+        TrainingTable.updateTable();
+        ExperienceTable.updateTable();
+        resume.loadData();
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        submitData();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -1095,9 +1146,22 @@ public class MyProfile extends javax.swing.JPanel {
         }
 
         //Check if there's existing profile data
-        query = "SELECT profile.*, municipalities.*, provinces.*, barangay.* FROM profile INNER JOIN provinces ON profile.ProvinceID = provinces.ProvinceID INNER JOIN municipalities ON profile.MunicipalityID = municipalities.MunicipalityID INNER JOIN barangay ON profile.BarangayID = barangay.BarangayID WHERE UserID = " + Auth.userId;
+        query = "SELECT DISTINCT profile.*, municipalities.*, provinces.*, barangay.* FROM profile INNER JOIN provinces ON profile.ProvinceID = provinces.ProvinceID INNER JOIN municipalities ON profile.MunicipalityID = municipalities.MunicipalityID INNER JOIN barangay ON profile.BarangayID = barangay.BarangayID WHERE UserID = " + Auth.userId;
         a.createQuery(query).executeQuery();
         if (a.getResults().isEmpty()) {
+            //Clear other fields
+            jTextField21.setText("");
+            jTextField14.setText("");
+            jTextField15.setText("");
+            jTextField13.setText("");
+            jTextField18.setText("");
+            jTextField20.setText("");
+            jComboBox1.setSelectedIndex(0);
+            jComboBox10.setSelectedIndex(0);
+            jComboBox6.setSelectedIndex(0);
+            jComboBox2.setSelectedIndex(0);
+            jComboBox3.setSelectedIndex(0);
+            jComboBox9.setSelectedIndex(0);
             return;
         } else {
             //Put the data in the fields
@@ -1107,21 +1171,20 @@ public class MyProfile extends javax.swing.JPanel {
                     return a.getResults();
                 }
             };
-            for (int i = 0; i < parser.getResultsSize(); i++) {
-                var result = parser.parseResults(i);
-                jTextField21.setText(result.getValueByKey("ContactNo").toString());
-                jTextField14.setText(result.getValueByKey("Height").toString());
-                jTextField15.setText(result.getValueByKey("Weight").toString());
-                jTextField13.setText(result.getValueByKey("Religion").toString());
-                jTextField18.setText(result.getValueByKey("House").toString());
-                jTextField20.setText(result.getValueByKey("StreetNo").toString());
-                jComboBox1.setSelectedItem(result.getValueByKey("ProvinceName").toString());
-                jComboBox10.setSelectedItem(result.getValueByKey("MunicipalityName").toString());
-                jComboBox6.setSelectedItem(result.getValueByKey("BarangayName").toString());
-                jComboBox3.setSelectedItem(result.getValueByKey("Birthplace_Mun").toString());
-                jComboBox2.setSelectedItem(result.getValueByKey("Birthplace_Pro").toString());
-                jComboBox9.setSelectedItem(result.getValueByKey("CivilStatus").toString());
-            }
+            var result = parser.parseResults();
+            jTextField21.setText(result.getValueByKey("ContactNo").toString());
+            jTextField14.setText(result.getValueByKey("Height").toString());
+            jTextField15.setText(result.getValueByKey("Weight").toString());
+            jTextField13.setText(result.getValueByKey("Religion").toString());
+            jTextField18.setText(result.getValueByKey("House").toString());
+            jTextField20.setText(result.getValueByKey("StreetNo").toString());
+            jComboBox1.setSelectedItem(result.getValueByKey("ProvinceName").toString());
+            jComboBox10.setSelectedItem(result.getValueByKey("MunicipalityName").toString());
+            jComboBox6.setSelectedItem(result.getValueByKey("BarangayName").toString());
+            jComboBox2.setSelectedItem(result.getValueByKey("Birthplace_Pro").toString());
+            jComboBox3.setSelectedItem(result.getValueByKey("Birthplace_Mun").toString());
+            jComboBox9.setSelectedItem(result.getValueByKey("CivilStatus").toString());
+            
         }
     }
 
@@ -1137,7 +1200,8 @@ public class MyProfile extends javax.swing.JPanel {
         String height = jTextField14.getText();
         String weight = jTextField15.getText();
         String religion = jTextField13.getText();
-        String Civil = jComboBox9.getSelectedItem().toString();
+        String civil = jComboBox9.getSelectedItem().toString();
+        String gender = jComboBox5.getSelectedItem().toString();
 
         //Address
         String province = jComboBox1.getSelectedItem().toString();
@@ -1191,7 +1255,7 @@ public class MyProfile extends javax.swing.JPanel {
         }
 
         //Prepare the query
-        String query = "UPDATE user SET FirstName = '" + firstName + "', MiddleName = '" + middleName + "', LastName = '" + lastName + "', Suffix = '" + suffix + "', EmailAddress = '" + emailAddress + "', Birthdate = '" + birthdate + "' WHERE UserID = " + Auth.userId;
+        String query = "UPDATE user SET FirstName = '" + firstName + "', MiddleName = '" + middleName + "', LastName = '" + lastName + "', Suffix = '" + suffix + "', EmailAddress = '" + emailAddress + "', Birthdate = '" + birthdate + "', Gender = '" + gender + "' WHERE UserID = " + Auth.userId;
         //Update the user info first
         SQLHandler a = new SQLHandler();
 
@@ -1210,12 +1274,12 @@ public class MyProfile extends javax.swing.JPanel {
 
         //If there's no existing record, insert a new one
         if (a.getResults().isEmpty()) {
-            query = "INSERT INTO profile (UserID, ContactNo, Height, Weight, Religion, ProvinceID, MunicipalityID, BarangayID, House, StreetNo, Birthplace_Mun, Birthplace_Pro, CivilStatus) VALUES (" + Auth.userId + ", '" + mobileNumber + "', " + height + ", " + weight + ", '" + religion + "', (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + province + "'), (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '" + city + "'), (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay + "'), '" + house + "', '" + street + "', '" + municipalityPOB + "', '" + provincePOB + "', '" + Civil + "')";
-            System.out.println("Used Insert");
+            query = "INSERT INTO profile (UserID, ContactNo, Height, Weight, Religion, ProvinceID, MunicipalityID, BarangayID, House, StreetNo, Birthplace_Mun, Birthplace_Pro, CivilStatus) VALUES (" + Auth.userId + ", '" + mobileNumber + "', " + height + ", " + weight + ", '" + religion + "', (SELECT ProvinceID FROM provinces WHERE ProvinceName = '" + province + "'), (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '" + city + "'), (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay + "'), '" + house + "', '" + street + "', '" + municipalityPOB + "', '" + provincePOB + "', '" + civil + "')";
+
         } else {
             //If there's an existing record, update the record
-            query = "UPDATE profile SET ContactNo = '" + mobileNumber + "', Height = " + height + ", Weight = " + weight + ", Religion = '" + religion + "', ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '"+ province + "'), MunicipalityID = (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '"+ city + "'), BarangayID = (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay +"'), House = '" + house + "', StreetNo = '" + street + "', Birthplace_Mun = '" + municipalityPOB + "', Birthplace_Pro = '" + provincePOB + "', CivilStatus = '" + Civil + "' WHERE UserID = " + Auth.userId;
-            System.out.println("Used Update");
+            query = "UPDATE profile SET ContactNo = '" + mobileNumber + "', Height = " + height + ", Weight = " + weight + ", Religion = '" + religion + "', ProvinceID = (SELECT ProvinceID FROM provinces WHERE ProvinceName = '"+ province + "'), MunicipalityID = (SELECT MunicipalityID FROM municipalities WHERE MunicipalityName = '"+ city + "'), BarangayID = (SELECT BarangayID FROM barangay WHERE BarangayName = '" + barangay +"'), House = '" + house + "', StreetNo = '" + street + "', Birthplace_Mun = '" + municipalityPOB + "', Birthplace_Pro = '" + provincePOB + "', CivilStatus = '" + civil + "' WHERE UserID = " + Auth.userId;
+
         }
         //Execute the query
         try {
